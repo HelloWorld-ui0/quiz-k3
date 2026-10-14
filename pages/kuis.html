@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuis K3 - K3Learn</title>
+  <meta name="description" content="Kuis interaktif pilihan ganda untuk menguji pemahaman K3 Anda dengan penilaian otomatis.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="../index.html" class="nav-logo">
+      <div class="nav-logo-icon">⛑️</div>
+      <span class="nav-logo-text">K3<span>Learn</span></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html" class="nav-link">Beranda</a>
+      <a href="kursus.html" class="nav-link">Kursus K3</a>
+      <a href="kuis.html" class="nav-link active">Kuis</a>
+      <a href="hasil.html" class="nav-link">Hasil Saya</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:.75rem">
+      <a href="kursus.html" class="btn btn-outline">📚 Belajar Dulu</a>
+      <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- QUIZ LAYOUT -->
+<div class="quiz-layout">
+
+  <!-- QUIZ TOPBAR -->
+  <div class="quiz-topbar">
+    <div class="container">
+      <div class="quiz-topbar-inner">
+        <div>
+          <div class="quiz-title" id="quizTitle">📝 Kuis APD - Alat Pelindung Diri</div>
+          <div style="font-size:.8125rem;color:#6B7280;margin-top:.125rem">10 soal pilihan ganda • Nilai minimal lulus: 80</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:1.5rem">
+          <div class="quiz-timer" id="timerDisplay">⏱️ 20:00</div>
+          <div style="text-align:right">
+            <div style="font-size:.8125rem;color:#6B7280;margin-bottom:.25rem">Soal dijawab</div>
+            <div style="font-family:var(--font-display);font-weight:700;font-size:1rem;color:#152B5E"><span id="answeredCount">0</span> / 10</div>
+          </div>
+        </div>
+      </div>
+      <!-- Progress Bar -->
+      <div style="margin-top:.75rem">
+        <div class="progress-wrap" style="height:6px">
+          <div class="progress-bar progress-bar-orange" id="quizProgressBar" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUIZ MAIN -->
+  <div class="quiz-main">
+    <div class="quiz-container">
+
+      <!-- QUESTION NAVIGATOR -->
+      <div class="question-navigator">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem">
+          <div class="navigator-title">🗂️ Navigasi Soal</div>
+          <div style="display:flex;gap:.5rem;font-size:.75rem">
+            <span style="display:flex;align-items:center;gap:.375rem"><span style="width:14px;height:14px;background:#152B5E;border-radius:4px;display:inline-block"></span> Dijawab</span>
+            <span style="display:flex;align-items:center;gap:.375rem"><span style="width:14px;height:14px;background:#E85010;border-radius:4px;display:inline-block"></span> Aktif</span>
+            <span style="display:flex;align-items:center;gap:.375rem"><span style="width:14px;height:14px;background:#F9FAFB;border:1.5px solid #D1D5DB;border-radius:4px;display:inline-block"></span> Belum</span>
+          </div>
+        </div>
+        <div class="navigator-grid" id="navGrid"></div>
+      </div>
+
+      <!-- QUESTION CARD -->
+      <div class="question-card" id="questionCard">
+        <div class="question-badge" id="questionBadge">Soal 1 dari 10</div>
+        <div class="question-text" id="questionText"></div>
+        <div class="answer-options" id="answerOptions"></div>
+      </div>
+
+      <!-- QUIZ NAVIGATION FOOTER -->
+      <div class="quiz-nav-footer">
+        <button class="btn btn-outline-navy btn-sm" id="btnPrev" onclick="prevQuestion()" disabled>← Sebelumnya</button>
+
+        <div style="display:flex;align-items:center;gap:.75rem">
+          <button class="btn btn-sm" style="background:#FEF9C3;color:#92400E;border:1px solid #FDE68A" onclick="skipQuestion()">⏭️ Lewati</button>
+          <button class="btn btn-danger btn-sm" onclick="showSubmitModal()">🏁 Kumpulkan Jawaban</button>
+        </div>
+
+        <button class="btn btn-navy btn-sm" id="btnNext" onclick="nextQuestion()">Selanjutnya →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUBMIT MODAL -->
+<div class="modal-overlay" id="submitModal">
+  <div class="modal">
+    <div class="modal-icon modal-icon-warning">📋</div>
+    <h3 style="text-align:center;margin-bottom:.5rem;font-family:var(--font-display)">Kumpulkan Jawaban?</h3>
+    <p style="text-align:center;color:#6B7280;margin-bottom:1.5rem;font-size:.9375rem" id="modalDesc">Anda telah menjawab <strong id="modalAnswered">0</strong> dari <strong>10</strong> soal.</p>
+
+    <div id="unansweredWarn" style="display:none;background:#FFF5EE;border:1px solid #FEE4CF;border-radius:.75rem;padding:1rem;margin-bottom:1.25rem;font-size:.875rem;color:#C4430A">
+      ⚠️ <strong>Perhatian:</strong> Masih ada <span id="unansweredCount">0</span> soal yang belum dijawab. Soal yang tidak dijawab akan dianggap salah.
+    </div>
+
+    <div style="display:flex;gap:.75rem">
+      <button class="btn btn-outline-navy btn-full" onclick="closeSubmitModal()">← Kembali Kerjakan</button>
+      <button class="btn btn-primary btn-full" onclick="submitQuiz()">✅ Ya, Kumpulkan</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+document.getElementById('hamburger').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('mobile-open'));
+
+// =============================================
+// QUIZ DATA
+// =============================================
+const quizData = [
+  {
+    q: "Apakah singkatan dari APD dalam konteks keselamatan kerja?",
+    options: ["Alat Pengaman Daerah", "Alat Pelindung Diri", "Alat Penanda Daerah", "Alat Pengamanan Darurat"],
+    answer: 1,
+    explanation: "APD adalah singkatan dari Alat Pelindung Diri (Personal Protective Equipment), yaitu perlengkapan yang dipakai pekerja untuk melindungi tubuh dari bahaya di tempat kerja."
+  },
+  {
+    q: "Dalam hierarki pengendalian risiko K3, pada urutan keberapa APD berada?",
+    options: ["Pertama – paling utama", "Kedua setelah eliminasi", "Ketiga bersama substitusi", "Terakhir – paling akhir"],
+    answer: 3,
+    explanation: "APD berada di urutan TERAKHIR (kelima) dalam hierarki pengendalian risiko. Hierarki dari atas adalah: Eliminasi → Substitusi → Pengendalian Teknik → Pengendalian Administratif → APD."
+  },
+  {
+    q: "Helm keselamatan kelas E (Electrical) dirancang untuk menahan tegangan listrik hingga berapa volt?",
+    options: ["1.000 volt", "5.000 volt", "20.000 volt", "50.000 volt"],
+    answer: 2,
+    explanation: "Helm kelas E (Electrical) dirancang untuk melindungi dari paparan listrik hingga 20.000 volt, sesuai standar ANSI Z89.1. Helm ini digunakan untuk pekerjaan listrik tegangan tinggi."
+  },
+  {
+    q: "Apa yang harus dilakukan terhadap helm keselamatan yang pernah terkena benturan keras?",
+    options: ["Tetap digunakan jika tidak ada kerusakan terlihat", "Dibersihkan dan dilanjutkan penggunaan", "Segera diganti dengan helm baru", "Dicat ulang dan digunakan kembali"],
+    answer: 2,
+    explanation: "Helm yang pernah terkena benturan keras HARUS segera diganti meski tidak ada kerusakan yang terlihat. Benturan keras dapat merusak struktur internal helm yang tidak tampak dari luar."
+  },
+  {
+    q: "Jenis sarung tangan apa yang paling tepat digunakan saat bekerja dengan bahan kimia korosif?",
+    options: ["Sarung tangan kulit", "Sarung tangan nitrile/karet", "Sarung tangan kain tebal", "Sarung tangan anti-potong"],
+    answer: 1,
+    explanation: "Sarung tangan nitrile atau karet (rubber gloves) adalah pilihan yang tepat untuk bekerja dengan bahan kimia korosif karena tahan terhadap berbagai jenis bahan kimia."
+  },
+  {
+    q: "Regulasi Indonesia yang secara spesifik mengatur tentang APD di tempat kerja adalah:",
+    options: ["UU No. 13 Tahun 2003", "Permenakertrans No. 08 Tahun 2010", "PP No. 50 Tahun 2012", "Kepmenaker No. 187 Tahun 1999"],
+    answer: 1,
+    explanation: "Permenakertrans No. 08 Tahun 2010 tentang Alat Pelindung Diri secara spesifik mengatur jenis, standar, dan kewajiban penggunaan APD di tempat kerja Indonesia."
+  },
+  {
+    q: "Alat pelindung pernapasan yang paling sesuai untuk digunakan di area yang mengandung gas berbahaya dengan konsentrasi tinggi (IDLH) adalah:",
+    options: ["Masker kain biasa", "Respirator N95", "SCBA (Self-Contained Breathing Apparatus)", "Half-face respirator biasa"],
+    answer: 2,
+    explanation: "SCBA (Self-Contained Breathing Apparatus) adalah alat pelindung pernapasan yang wajib digunakan di area IDLH (Immediately Dangerous to Life or Health), karena menyediakan udara bersih dari tangki terpisah."
+  },
+  {
+    q: "Rompi safety/rompi reflektif terutama berfungsi untuk:",
+    options: ["Melindungi dari benda jatuh", "Meningkatkan visibilitas pekerja di area sibuk", "Melindungi dari percikan api", "Menyerap benturan fisik"],
+    answer: 1,
+    explanation: "Rompi safety/reflektif berfungsi utama untuk meningkatkan visibilitas pekerja, terutama di area dengan lalu lintas kendaraan berat atau kondisi cahaya rendah."
+  },
+  {
+    q: "Siapa yang berkewajiban menyediakan APD secara cuma-cuma kepada pekerja berdasarkan UU No. 1 Tahun 1970?",
+    options: ["Pekerja itu sendiri", "Pemerintah melalui Kemenaker", "Pengusaha/pemberi kerja", "Serikat pekerja"],
+    answer: 2,
+    explanation: "Berdasarkan UU No. 1 Tahun 1970 Pasal 14, pengusaha wajib menyediakan APD secara cuma-cuma kepada semua pekerja yang membutuhkannya sesuai dengan jenis pekerjaan dan risiko yang dihadapi."
+  },
+  {
+    q: "Sebelum menggunakan sarung tangan karet untuk pekerjaan kimia, apa yang harus diperiksa terlebih dahulu?",
+    options: ["Warna dan merek sarung tangan", "Apakah ada lubang atau kerusakan pada sarung tangan", "Ukuran sarung tangan sudah sesuai", "Tanggal kadaluarsa tertera dengan jelas"],
+    answer: 1,
+    explanation: "Sebelum menggunakan sarung tangan karet/kimia, WAJIB memeriksa apakah ada lubang atau kerusakan. Lubang kecil sekalipun dapat menyebabkan paparan bahan kimia berbahaya tanpa disadari."
+  }
+];
+
+// =============================================
+// QUIZ STATE
+// =============================================
+let currentQ = 0;
+let userAnswers = new Array(quizData.length).fill(null);
+let timeLeft = 20 * 60; // 20 minutes
+let timerInterval;
+
+// Build nav grid
+function buildNavGrid() {
+  const grid = document.getElementById('navGrid');
+  grid.innerHTML = '';
+  for(let i = 0; i < quizData.length; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'nav-dot' + (i === currentQ ? ' current' : '') + (userAnswers[i] !== null ? ' answered' : '');
+    dot.textContent = i + 1;
+    dot.id = 'dot-' + i;
+    dot.onclick = () => goToQuestion(i);
+    grid.appendChild(dot);
+  }
+}
+
+function updateNavDot(idx) {
+  const dot = document.getElementById('dot-' + idx);
+  if(!dot) return;
+  dot.className = 'nav-dot' + (idx === currentQ ? ' current' : '') + (userAnswers[idx] !== null ? ' answered' : '');
+}
+
+function renderQuestion() {
+  const q = quizData[currentQ];
+  document.getElementById('questionBadge').textContent = 'Soal ' + (currentQ + 1) + ' dari ' + quizData.length;
+  document.getElementById('questionText').textContent = q.q;
+
+  const opts = document.getElementById('answerOptions');
+  opts.innerHTML = '';
+  const letters = ['A', 'B', 'C', 'D'];
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'answer-option' + (userAnswers[currentQ] === i ? ' selected' : '');
+    btn.onclick = () => selectAnswer(i);
+    btn.innerHTML = `<div class="answer-letter">${letters[i]}</div><div class="answer-text">${opt}</div>`;
+    opts.appendChild(btn);
+  });
+
+  document.getElementById('btnPrev').disabled = currentQ === 0;
+  document.getElementById('btnNext').disabled = currentQ === quizData.length - 1;
+
+  // Update progress bar
+  const pct = Math.round((currentQ + 1) / quizData.length * 100);
+  document.getElementById('quizProgressBar').style.width = pct + '%';
+}
+
+function selectAnswer(idx) {
+  userAnswers[currentQ] = idx;
+  // Update display
+  document.querySelectorAll('.answer-option').forEach((opt, i) => {
+    opt.className = 'answer-option' + (i === idx ? ' selected' : '');
+    opt.querySelector('.answer-letter').className = 'answer-letter' + (i === idx ? '' : '');
+  });
+  // Update nav dot
+  const dot = document.getElementById('dot-' + currentQ);
+  if(dot) dot.className = 'nav-dot answered';
+  // Update count
+  const answered = userAnswers.filter(a => a !== null).length;
+  document.getElementById('answeredCount').textContent = answered;
+  // Auto advance
+  setTimeout(() => { if(currentQ < quizData.length - 1) nextQuestion(); }, 400);
+}
+
+function goToQuestion(idx) {
+  const prevIdx = currentQ;
+  currentQ = idx;
+  updateNavDot(prevIdx);
+  updateNavDot(idx);
+  document.getElementById('dot-' + prevIdx).className = 'nav-dot' + (userAnswers[prevIdx] !== null ? ' answered' : '');
+  document.getElementById('dot-' + idx).className = 'nav-dot current' + (userAnswers[idx] !== null ? ' answered' : '');
+  renderQuestion();
+}
+
+function prevQuestion() { if(currentQ > 0) goToQuestion(currentQ - 1); }
+function nextQuestion() { if(currentQ < quizData.length - 1) goToQuestion(currentQ + 1); }
+function skipQuestion() { nextQuestion(); }
+
+// Timer
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    const m = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+    const s = (timeLeft % 60).toString().padStart(2, '0');
+    const display = document.getElementById('timerDisplay');
+    display.textContent = '⏱️ ' + m + ':' + s;
+    if(timeLeft <= 300) display.className = 'quiz-timer warning';
+    if(timeLeft <= 60)  display.className = 'quiz-timer danger';
+    if(timeLeft <= 0)   { clearInterval(timerInterval); submitQuiz(); }
+  }, 1000);
+}
+
+// Submit
+function showSubmitModal() {
+  const answered = userAnswers.filter(a => a !== null).length;
+  const unanswered = quizData.length - answered;
+  document.getElementById('modalAnswered').textContent = answered;
+  const warnEl = document.getElementById('unansweredWarn');
+  if(unanswered > 0) {
+    warnEl.style.display = 'block';
+    document.getElementById('unansweredCount').textContent = unanswered;
+  } else {
+    warnEl.style.display = 'none';
+  }
+  document.getElementById('submitModal').classList.add('active');
+}
+
+function closeSubmitModal() {
+  document.getElementById('submitModal').classList.remove('active');
+}
+
+function submitQuiz() {
+  clearInterval(timerInterval);
+  closeSubmitModal();
+  // Calculate score
+  let correct = 0;
+  quizData.forEach((q, i) => { if(userAnswers[i] === q.answer) correct++; });
+  const score = Math.round((correct / quizData.length) * 100);
+  // Save to localStorage
+  const hist = JSON.parse(localStorage.getItem('k3_history') || '[]');
+  hist.unshift({ materi: 'APD', score, correct, total: quizData.length, date: new Date().toISOString(), answers: userAnswers });
+  localStorage.setItem('k3_history', JSON.stringify(hist.slice(0, 20)));
+  localStorage.setItem('k3_last_quiz', JSON.stringify({ materi: 'APD', score, correct, total: quizData.length, questions: quizData, answers: userAnswers }));
+  // Redirect to result
+  window.location.href = 'hasil.html';
+}
+
+// Toast
+function showToast(msg, type='warning') {
+  const t = document.createElement('div');
+  t.className = 'toast toast-' + type;
+  t.innerHTML = (type === 'warning' ? '⚠️' : '✅') + ' ' + msg;
+  document.getElementById('toastContainer').appendChild(t);
+  setTimeout(() => t.remove(), 3500);
+}
+
+// INIT
+document.addEventListener('DOMContentLoaded', () => {
+  buildNavGrid();
+  renderQuestion();
+  startTimer();
+});
+</script>
+</body>
+</html>

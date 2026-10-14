@@ -1,0 +1,348 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materi APD - K3Learn</title>
+  <meta name="description" content="Pelajari Alat Pelindung Diri (APD) secara lengkap - jenis, cara pakai, dan pemeliharaan.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="../index.html" class="nav-logo">
+      <div class="nav-logo-icon">⛑️</div>
+      <span class="nav-logo-text">K3<span>Learn</span></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html" class="nav-link">Beranda</a>
+      <a href="kursus.html" class="nav-link active">Kursus K3</a>
+      <a href="kuis.html" class="nav-link">Kuis</a>
+      <a href="hasil.html" class="nav-link">Hasil Saya</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:.75rem">
+      <a href="kuis.html" class="btn btn-primary">📝 Kerjakan Kuis</a>
+      <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">🏠 Beranda</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="kursus.html">Kursus K3</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current" id="currentMateri">Alat Pelindung Diri</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:.75rem">
+      <span class="badge badge-orange">🦺 APD</span>
+      <span class="badge badge-gray">⏱️ 40 menit</span>
+      <span class="badge badge-green">📄 5 topik</span>
+    </div>
+    <h1 class="page-header-title" id="materiTitle">Alat Pelindung Diri (APD)</h1>
+    <p class="page-header-subtitle">Pelajari jenis APD, cara pemakaian yang benar, dan pentingnya APD dalam keselamatan kerja</p>
+  </div>
+</header>
+
+<!-- CONTENT -->
+<main style="padding:2rem 0;background:#F9FAFB">
+  <div class="container">
+    <div class="course-layout">
+
+      <!-- MAIN CONTENT -->
+      <div>
+        <!-- Progress Bar Kursus -->
+        <div class="card mb-6" style="margin-bottom:1.5rem">
+          <div class="card-body" style="padding:1.25rem">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem">
+              <span style="font-weight:600;font-size:.9375rem;color:#374151">📊 Progres Kursus Ini</span>
+              <span id="progressPct" style="font-weight:700;color:#16A34A;font-size:1rem">2 / 5 Selesai</span>
+            </div>
+            <div class="progress-wrap progress-lg">
+              <div class="progress-bar progress-bar-green" id="progressBar" style="width:40%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article Content -->
+        <div class="card" style="margin-bottom:1.5rem">
+          <div class="card-header" style="display:flex;align-items:center;justify-content:space-between">
+            <div style="font-family:var(--font-display);font-weight:700;color:#152B5E" id="sectionTitle">📍 Topik 1: Pengertian dan Tujuan APD</div>
+            <span class="badge badge-orange" id="sectionBadge">Sedang Dibaca</span>
+          </div>
+          <div class="card-body" id="articleContent">
+            <div class="article">
+              <img src="../assets/images/course_apd.jpg" alt="Alat Pelindung Diri" style="margin-bottom:1.5rem;border-radius:1rem">
+
+              <h2>Apa itu Alat Pelindung Diri (APD)?</h2>
+              <p>Alat Pelindung Diri (APD) atau dalam bahasa Inggris dikenal sebagai <strong>Personal Protective Equipment (PPE)</strong> adalah seperangkat alat yang digunakan oleh pekerja untuk melindungi seluruh atau sebagian tubuhnya dari potensi bahaya atau kecelakaan kerja.</p>
+
+              <div class="callout">
+                <strong>💡 Penting Diingat:</strong> APD adalah pertahanan <em>terakhir</em> dalam hierarki pengendalian risiko. Penggunaan APD tidak menghilangkan bahaya, melainkan hanya mengurangi dampak jika terjadi paparan.
+              </div>
+
+              <h2>Dasar Hukum Penggunaan APD</h2>
+              <p>Kewajiban penggunaan APD di tempat kerja diatur dalam beberapa regulasi:</p>
+              <ul>
+                <li><strong>UU No. 1 Tahun 1970</strong> tentang Keselamatan Kerja – Pasal 14 mewajibkan pengusaha menyediakan APD secara cuma-cuma</li>
+                <li><strong>Permenakertrans No. 08/2010</strong> tentang APD – mengatur secara spesifik jenis dan standar APD</li>
+                <li><strong>ISO 45001:2018</strong> – standar internasional sistem manajemen K3</li>
+              </ul>
+
+              <h2>Hierarki Pengendalian Risiko</h2>
+              <p>Sebelum menggunakan APD, pahami dahwa APD berada di urutan terakhir dalam hierarki pengendalian risiko:</p>
+
+              <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:1rem;padding:1.5rem;margin:1.5rem 0">
+                <div style="display:flex;flex-direction:column;gap:.75rem">
+                  <div style="display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,#DC2626,#EF4444);border-radius:.75rem;color:#fff">
+                    <span style="font-weight:800;font-size:1.125rem">1</span>
+                    <div><strong>Eliminasi</strong> – Hapus bahaya dari proses kerja</div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,#E85010,#F06A25);border-radius:.75rem;color:#fff">
+                    <span style="font-weight:800;font-size:1.125rem">2</span>
+                    <div><strong>Substitusi</strong> – Ganti dengan yang lebih aman</div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,#EAB308,#FBBF24);border-radius:.75rem;color:#fff">
+                    <span style="font-weight:800;font-size:1.125rem">3</span>
+                    <div><strong>Pengendalian Teknik</strong> – Isolasi bahaya secara teknis</div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,#16A34A,#22C55E);border-radius:.75rem;color:#fff">
+                    <span style="font-weight:800;font-size:1.125rem">4</span>
+                    <div><strong>Pengendalian Administratif</strong> – SOP, pelatihan, rotasi kerja</div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,#152B5E,#1A3576);border-radius:.75rem;color:#fff">
+                    <span style="font-weight:800;font-size:1.125rem">5</span>
+                    <div><strong>APD</strong> – Alat Pelindung Diri (pilihan terakhir)</div>
+                  </div>
+                </div>
+              </div>
+
+              <h2>Jenis-Jenis APD Berdasarkan Bagian Tubuh</h2>
+
+              <h3>🪖 1. Pelindung Kepala (Helm Keselamatan)</h3>
+              <p>Helm keselamatan (safety helmet) melindungi kepala dari benda jatuh, benturan, dan bahaya listrik. Terdapat 3 kelas:</p>
+              <ul>
+                <li><strong>Kelas E (Electrical)</strong> – tahan hingga 20.000 volt, untuk pekerjaan listrik tegangan tinggi</li>
+                <li><strong>Kelas G (General)</strong> – untuk keperluan umum industri</li>
+                <li><strong>Kelas C (Conductive)</strong> – tidak tahan listrik, hanya untuk benturan mekanis</li>
+              </ul>
+
+              <div class="callout callout-warning">
+                <strong>⚠️ Perhatian:</strong> Helm yang pernah terkena benturan keras HARUS diganti meski tidak terlihat rusak. Struktur internalnya bisa sudah lemah.
+              </div>
+
+              <h3>👁️ 2. Pelindung Mata dan Wajah</h3>
+              <ul>
+                <li><strong>Kacamata Safety</strong> – dari partikel terbang, debu, dan sinar UV</li>
+                <li><strong>Goggle</strong> – menutup seluruh area mata, untuk percikan kimia dan debu halus</li>
+                <li><strong>Face Shield</strong> – melindungi seluruh wajah dari percikan logam cair atau bahan kimia</li>
+                <li><strong>Helm Las</strong> – dengan kaca gelap untuk melindungi dari radiasi sinar las</li>
+              </ul>
+
+              <h3>🫁 3. Pelindung Pernapasan</h3>
+              <ul>
+                <li><strong>Masker Kain/Bedah</strong> – untuk debu kasar dan percikan</li>
+                <li><strong>Respirator N95/FFP2</strong> – untuk partikel halus, virus, dan spora jamur</li>
+                <li><strong>Half-Face Respirator</strong> – dengan cartridge filter khusus kimia</li>
+                <li><strong>SCBA</strong> – Self-Contained Breathing Apparatus untuk area IDLH (Immediately Dangerous to Life or Health)</li>
+              </ul>
+
+              <h3>🧤 4. Pelindung Tangan</h3>
+              <ul>
+                <li><strong>Sarung Tangan Kulit</strong> – untuk pekerjaan kasar, las, dan panas</li>
+                <li><strong>Sarung Tangan Karet/Nitrile</strong> – untuk bahan kimia dan cairan berbahaya</li>
+                <li><strong>Sarung Tangan Anti-Potong (Cut-Resistant)</strong> – untuk pekerjaan dengan pisau dan benda tajam</li>
+                <li><strong>Sarung Tangan Isolasi</strong> – untuk pekerjaan listrik tegangan tinggi</li>
+              </ul>
+
+              <div class="callout callout-success">
+                <strong>✅ Tips Penting:</strong> Selalu periksa sarung tangan sebelum digunakan. Adanya lubang kecil pada sarung tangan karet/kimia dapat membuat Anda terpapar bahan berbahaya tanpa disadari!
+              </div>
+
+              <h3>🦺 5. Pelindung Tubuh</h3>
+              <ul>
+                <li><strong>Rompi Safety / Vest Reflektif</strong> – meningkatkan visibilitas di area sibuk kendaraan</li>
+                <li><strong>Baju Tahan Api (FR Clothing)</strong> – untuk pekerjaan di lingkungan berapi/panas</li>
+                <li><strong>Baju Kimia (Chemical Suit)</strong> – tahan terhadap percikan dan paparan bahan kimia</li>
+                <li><strong>Safety Harness</strong> – untuk pekerjaan di ketinggian</li>
+              </ul>
+
+              <h3>👢 6. Pelindung Kaki</h3>
+              <ul>
+                <li><strong>Safety Shoes</strong> – dengan ujung baja, tahan terhadap benda jatuh dan tusukan</li>
+                <li><strong>Rubber Boot</strong> – untuk area basah dan kimia korosif</li>
+                <li><strong>Anti-Static Shoes</strong> – mencegah akumulasi listrik statis di area ATEX</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ARTICLE NAV -->
+          <div class="card-footer">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+              <button class="btn btn-outline-navy btn-sm" id="btnPrev" onclick="prevTopic()">← Sebelumnya</button>
+              <button class="btn btn-success btn-sm" id="btnDone" onclick="markDone()">✅ Tandai Selesai</button>
+              <button class="btn btn-primary btn-sm" id="btnNext" onclick="nextTopic()">Selanjutnya →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SELESAI SECTION -->
+        <div id="materiSelesai" style="display:none">
+          <div class="card" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7);border-color:#86EFAC;text-align:center;padding:2rem">
+            <div style="font-size:3rem;margin-bottom:1rem">🎉</div>
+            <h3 style="color:#15803D;margin-bottom:.5rem">Selamat! Materi APD Selesai!</h3>
+            <p style="color:#166534;margin-bottom:1.5rem">Anda telah menyelesaikan semua topik dalam kursus Alat Pelindung Diri. Saatnya uji pemahaman Anda!</p>
+            <a href="kuis.html?materi=apd" class="btn btn-success btn-lg">📝 Kerjakan Kuis APD →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="course-sidebar">
+        <div class="course-sidebar-card">
+          <img src="../assets/images/course_apd.jpg" alt="APD" class="course-sidebar-img">
+          <div class="course-sidebar-body">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:1rem;color:#111827;margin-bottom:1rem">Alat Pelindung Diri</div>
+
+            <div class="course-meta-list">
+              <div class="course-meta-item">
+                <div class="course-meta-icon">⏱️</div>
+                <span>Durasi: 40 menit</span>
+              </div>
+              <div class="course-meta-item">
+                <div class="course-meta-icon">📄</div>
+                <span>5 Sub-materi</span>
+              </div>
+              <div class="course-meta-item">
+                <div class="course-meta-icon">📝</div>
+                <span>10 Soal Kuis</span>
+              </div>
+              <div class="course-meta-item">
+                <div class="course-meta-icon">🏆</div>
+                <span>Min. Nilai Lulus: 80</span>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div style="font-family:var(--font-display);font-weight:700;font-size:.875rem;color:#374151;margin-bottom:.75rem;text-transform:uppercase;letter-spacing:.06em">📚 Daftar Topik</div>
+            <div class="curriculum-list" id="curriculumList">
+              <div class="curriculum-item active" onclick="loadTopic(0)" id="topic-0">
+                <div class="curriculum-num active-num" id="num-0">1</div>
+                <div class="curriculum-text">Pengertian dan Tujuan APD</div>
+              </div>
+              <div class="curriculum-item" onclick="loadTopic(1)" id="topic-1">
+                <div class="curriculum-num done-num" id="num-1">✓</div>
+                <div class="curriculum-text">Jenis-Jenis APD</div>
+              </div>
+              <div class="curriculum-item" onclick="loadTopic(2)" id="topic-2">
+                <div class="curriculum-num done-num" id="num-2">✓</div>
+                <div class="curriculum-text">Cara Pemakaian yang Benar</div>
+              </div>
+              <div class="curriculum-item" onclick="loadTopic(3)" id="topic-3">
+                <div class="curriculum-num" id="num-3">4</div>
+                <div class="curriculum-text">Perawatan dan Pemeliharaan</div>
+              </div>
+              <div class="curriculum-item" onclick="loadTopic(4)" id="topic-4">
+                <div class="curriculum-num" id="num-4">5</div>
+                <div class="curriculum-text">Standar dan Regulasi APD</div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+            <a href="kuis.html?materi=apd" class="btn btn-primary btn-full btn-sm">📝 Kerjakan Kuis APD</a>
+            <div style="margin-top:.75rem">
+              <a href="kursus.html" class="btn btn-outline-navy btn-full btn-sm">← Kembali ke Kursus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" style="margin-top:0">
+  <div class="container">
+    <div class="footer-bottom" style="padding-top:1.5rem">
+      <span>© 2026 K3Learn.</span>
+      <a href="kursus.html" style="color:rgba(255,255,255,0.5)">← Kembali ke Daftar Kursus</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+document.getElementById('hamburger').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('mobile-open'));
+
+// Topic state
+let currentTopic = 0;
+const totalTopics = 5;
+const completedTopics = new Set([1, 2]); // Topics 1,2 already done (0-indexed)
+
+const topicTitles = [
+  '📍 Topik 1: Pengertian dan Tujuan APD',
+  '📍 Topik 2: Jenis-Jenis APD',
+  '📍 Topik 3: Cara Pemakaian yang Benar',
+  '📍 Topik 4: Perawatan dan Pemeliharaan',
+  '📍 Topik 5: Standar dan Regulasi APD'
+];
+
+function updateProgress() {
+  const done = completedTopics.size;
+  const pct = Math.round((done / totalTopics) * 100);
+  document.getElementById('progressPct').textContent = done + ' / ' + totalTopics + ' Selesai';
+  document.getElementById('progressBar').style.width = pct + '%';
+}
+
+function loadTopic(idx) {
+  currentTopic = idx;
+  // Update sidebar highlights
+  for(let i = 0; i < totalTopics; i++) {
+    const item = document.getElementById('topic-' + i);
+    const num = document.getElementById('num-' + i);
+    item.classList.remove('active');
+    if(i === idx) {
+      item.classList.add('active');
+      num.className = 'curriculum-num active-num';
+      num.textContent = (i + 1);
+    } else if(completedTopics.has(i)) {
+      num.className = 'curriculum-num done-num';
+      num.textContent = '✓';
+    } else {
+      num.className = 'curriculum-num';
+      num.textContent = (i + 1);
+    }
+  }
+  document.getElementById('sectionTitle').textContent = topicTitles[idx];
+  document.getElementById('btnPrev').disabled = idx === 0;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function markDone() {
+  completedTopics.add(currentTopic);
+  const num = document.getElementById('num-' + currentTopic);
+  num.className = 'curriculum-num done-num';
+  num.textContent = '✓';
+  document.getElementById('sectionBadge').textContent = 'Selesai ✓';
+  document.getElementById('sectionBadge').className = 'badge badge-green';
+  updateProgress();
+  if(completedTopics.size === totalTopics) {
+    document.getElementById('materiSelesai').style.display = 'block';
+    document.getElementById('materiSelesai').scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+function prevTopic() { if(currentTopic > 0) loadTopic(currentTopic - 1); }
+function nextTopic() { if(currentTopic < totalTopics - 1) loadTopic(currentTopic + 1); }
+
+updateProgress();
+</script>
+</body>
+</html>

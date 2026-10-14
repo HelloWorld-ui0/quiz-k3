@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K3Learn - Platform Pembelajaran Keselamatan dan Kesehatan Kerja</title>
+  <meta name="description" content="Pelajari K3 secara online. Kursus interaktif, kuis otomatis, dan sertifikasi digital untuk meningkatkan keselamatan kerja di tempat Anda.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛑️</text></svg>">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">⛑️</div>
+      <span class="nav-logo-text">K3<span>Learn</span></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link active">Beranda</a>
+      <a href="pages/kursus.html" class="nav-link">Kursus K3</a>
+      <a href="pages/kuis.html" class="nav-link">Kuis</a>
+      <a href="pages/hasil.html" class="nav-link">Hasil Saya</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:.75rem">
+      <a href="pages/kursus.html" class="btn btn-primary">Mulai Belajar →</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="beranda">
+  <div class="hero-bg"><img src="assets/images/hero_worker.jpg" alt="Worker" loading="eager"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-image-col">
+    <img src="assets/images/hero_worker.jpg" alt="Safety Worker">
+  </div>
+  <div class="container">
+    <div class="hero-content animate-fade-up">
+      <div class="hero-badge">🏆 Platform E-Learning K3 Terpercaya</div>
+      <h1 class="hero-title">
+        Tingkatkan Kesadaran <span class="highlight">K3</span>, Ciptakan Lingkungan Kerja yang <span class="highlight">Aman</span>
+      </h1>
+      <p class="hero-desc">
+        Pelajari standar Keselamatan dan Kesehatan Kerja melalui kurikulum komprehensif, kuis interaktif, dan sistem penilaian otomatis yang dirancang oleh para ahli K3 bersertifikat.
+      </p>
+      <div class="hero-actions">
+        <a href="pages/kursus.html" class="btn btn-primary btn-lg">🎓 Mulai Belajar</a>
+        <a href="pages/kuis.html" class="btn btn-outline btn-lg">📝 Kerjakan Kuis</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-number">8+</div>
+          <div class="hero-stat-label">Modul Kursus</div>
+        </div>
+        <div>
+          <div class="hero-stat-number">50+</div>
+          <div class="hero-stat-label">Soal Kuis</div>
+        </div>
+        <div>
+          <div class="hero-stat-number">100%</div>
+          <div class="hero-stat-label">Gratis Akses</div>
+        </div>
+        <div>
+          <div class="hero-stat-number">SNI</div>
+          <div class="hero-stat-label">Standar Nasional</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div data-aos data-delay="100">
+        <div class="stat-num">2.500+</div>
+        <div class="stat-lbl">Peserta Terdaftar</div>
+      </div>
+      <div data-aos data-delay="200">
+        <div class="stat-num">8</div>
+        <div class="stat-lbl">Kursus Tersedia</div>
+      </div>
+      <div data-aos data-delay="300">
+        <div class="stat-num">95%</div>
+        <div class="stat-lbl">Tingkat Kepuasan</div>
+      </div>
+      <div data-aos data-delay="400">
+        <div class="stat-num">ISO</div>
+        <div class="stat-lbl">45001 Compliant</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- KATEGORI MATERI -->
+<section class="section-padding" id="kategori">
+  <div class="container">
+    <div class="text-center mb-12">
+      <div class="section-label">📚 Kategori Materi</div>
+      <h2 class="section-title">Pilih Topik K3 yang Ingin Dipelajari</h2>
+      <p class="section-subtitle" style="margin:0 auto">Materi disusun sistematis sesuai standar K3 nasional dan internasional</p>
+    </div>
+    <div class="category-grid">
+      <a href="pages/kursus.html?kategori=dasar" class="category-card" data-aos data-delay="100">
+        <div class="category-icon cat-navy">🏛️</div>
+        <div class="category-name">Dasar-Dasar K3</div>
+        <div class="category-count">1 kursus • 45 menit</div>
+      </a>
+      <a href="pages/kursus.html?kategori=apd" class="category-card" data-aos data-delay="150">
+        <div class="category-icon cat-orange">🦺</div>
+        <div class="category-name">Alat Pelindung Diri</div>
+        <div class="category-count">1 kursus • 40 menit</div>
+      </a>
+      <a href="pages/kursus.html?kategori=bahaya" class="category-card" data-aos data-delay="200">
+        <div class="category-icon cat-yellow">⚠️</div>
+        <div class="category-name">Identifikasi Bahaya</div>
+        <div class="category-count">1 kursus • 50 menit</div>
+      </a>
+      <a href="pages/kursus.html?kategori=kebakaran" class="category-card" data-aos data-delay="250">
+        <div class="category-icon cat-red">🔥</div>
+        <div class="category-name">Pencegahan Kebakaran</div>
+        <div class="category-count">1 kursus • 35 menit</div>
+      </a>
+      <a href="pages/kursus.html?kategori=p3k" class="category-card" data-aos data-delay="300">
+        <div class="category-icon cat-green">🏥</div>
+        <div class="category-name">Pertolongan Pertama</div>
+        <div class="category-count">1 kursus • 55 menit</div>
+      </a>
+      <a href="pages/kursus.html?kategori=mesin" class="category-card" data-aos data-delay="350">
+        <div class="category-icon cat-blue">⚙️</div>
+        <div class="category-name">Keselamatan Mesin</div>
+        <div class="category-count">1 kursus • 45 menit</div>
+      </a>
+      <a href="pages/kursus.html?kategori=kimia" class="category-card" data-aos data-delay="400">
+        <div class="category-icon cat-purple">🧪</div>
+        <div class="category-name">Penanganan Bahan Kimia</div>
+        <div class="category-count">1 kursus • 60 menit</div>
+      </a>
+      <a href="pages/kursus.html?kategori=darurat" class="category-card" data-aos data-delay="450">
+        <div class="category-icon cat-teal">🚨</div>
+        <div class="category-name">Prosedur Darurat</div>
+        <div class="category-count">1 kursus • 40 menit</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- KURSUS POPULER -->
+<section class="section-padding" style="background:#F9FAFB" id="kursus-populer">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem;flex-wrap:wrap;gap:1rem">
+      <div>
+        <div class="section-label section-label-navy">🔥 Paling Diminati</div>
+        <h2 class="section-title">Kursus K3 Populer</h2>
+        <p class="section-subtitle">Mulai dari yang paling banyak dipelajari oleh peserta aktif</p>
+      </div>
+      <a href="pages/kursus.html" class="btn btn-outline-navy">Lihat Semua Kursus →</a>
+    </div>
+    <div class="courses-grid">
+      <!-- Kursus 1 -->
+      <div class="course-card" data-aos data-delay="100">
+        <div class="course-img-wrap">
+          <img src="assets/images/course_k3basics.jpg" alt="Dasar K3" loading="lazy">
+          <div class="course-img-badge"><span class="badge badge-navy">🏛️ Dasar</span></div>
+        </div>
+        <div class="course-body">
+          <div class="course-title">Pengenalan Dasar-Dasar K3</div>
+          <p class="course-desc">Memahami konsep fundamental keselamatan dan kesehatan kerja, regulasi, dan tanggung jawab semua pihak.</p>
+          <div class="course-meta">
+            <div class="course-meta-item">⏱️ 45 menit</div>
+            <div class="course-meta-item">📄 6 sub-materi</div>
+            <div class="course-meta-item">📝 10 soal kuis</div>
+          </div>
+          <div>
+            <div class="course-progress-hdr"><span>Progres</span><span style="color:#16A34A;font-weight:700">65%</span></div>
+            <div class="progress-wrap"><div class="progress-bar" style="width:65%"></div></div>
+          </div>
+        </div>
+        <div class="card-footer" style="padding:1rem 1.25rem">
+          <a href="pages/materi.html?id=k3dasar" class="btn btn-navy btn-full btn-sm">📖 Lanjutkan Belajar</a>
+        </div>
+      </div>
+      <!-- Kursus 2 -->
+      <div class="course-card" data-aos data-delay="200">
+        <div class="course-img-wrap">
+          <img src="assets/images/course_apd.jpg" alt="APD" loading="lazy">
+          <div class="course-img-badge"><span class="badge badge-orange">🦺 APD</span></div>
+        </div>
+        <div class="course-body">
+          <div class="course-title">Alat Pelindung Diri (APD)</div>
+          <p class="course-desc">Pelajari jenis-jenis APD, cara penggunaan yang benar, dan pentingnya APD dalam mencegah kecelakaan kerja.</p>
+          <div class="course-meta">
+            <div class="course-meta-item">⏱️ 40 menit</div>
+            <div class="course-meta-item">📄 5 sub-materi</div>
+            <div class="course-meta-item">📝 10 soal kuis</div>
+          </div>
+          <div>
+            <div class="course-progress-hdr"><span>Progres</span><span style="color:#E85010;font-weight:700">30%</span></div>
+            <div class="progress-wrap"><div class="progress-bar progress-bar-orange" style="width:30%"></div></div>
+          </div>
+        </div>
+        <div class="card-footer" style="padding:1rem 1.25rem">
+          <a href="pages/materi.html?id=apd" class="btn btn-primary btn-full btn-sm">🎓 Mulai Belajar</a>
+        </div>
+      </div>
+      <!-- Kursus 3 -->
+      <div class="course-card" data-aos data-delay="300">
+        <div class="course-img-wrap">
+          <img src="assets/images/course_fire.jpg" alt="Kebakaran" loading="lazy">
+          <div class="course-img-badge"><span class="badge badge-red">🔥 Kebakaran</span></div>
+        </div>
+        <div class="course-body">
+          <div class="course-title">Pencegahan dan Penanganan Kebakaran</div>
+          <p class="course-desc">Pahami klasifikasi kebakaran, penggunaan APAR, jalur evakuasi, dan prosedur penanganan darurat kebakaran.</p>
+          <div class="course-meta">
+            <div class="course-meta-item">⏱️ 35 menit</div>
+            <div class="course-meta-item">📄 5 sub-materi</div>
+            <div class="course-meta-item">📝 10 soal kuis</div>
+          </div>
+          <div>
+            <div class="course-progress-hdr"><span>Progres</span><span style="color:#9CA3AF;font-weight:700">0%</span></div>
+            <div class="progress-wrap"><div class="progress-bar" style="width:0%"></div></div>
+          </div>
+        </div>
+        <div class="card-footer" style="padding:1rem 1.25rem">
+          <a href="pages/materi.html?id=kebakaran" class="btn btn-navy btn-full btn-sm">📖 Mulai Belajar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANFAAT BELAJAR K3 -->
+<section class="benefits-section" id="manfaat">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center" class="benefits-responsive">
+      <div data-aos>
+        <div class="section-label" style="background:rgba(232,80,16,0.15);color:#F5863F">✨ Mengapa K3 Penting</div>
+        <h2 class="section-title" style="color:#fff;margin-bottom:1rem">Manfaat Nyata Belajar K3</h2>
+        <p style="color:rgba(255,255,255,0.65);font-size:1.0625rem;line-height:1.7;margin-bottom:1.5rem">
+          Investasi dalam pengetahuan K3 bukan hanya kewajiban — ini adalah langkah nyata melindungi diri sendiri, rekan kerja, dan keluarga di rumah.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div style="display:flex;align-items:center;gap:.75rem;color:rgba(255,255,255,0.8)">
+            <span style="font-size:1.25rem">✅</span>
+            <span>Mengurangi risiko kecelakaan kerja hingga 70%</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.75rem;color:rgba(255,255,255,0.8)">
+            <span style="font-size:1.25rem">✅</span>
+            <span>Memenuhi persyaratan regulasi dan standar industri</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.75rem;color:rgba(255,255,255,0.8)">
+            <span style="font-size:1.25rem">✅</span>
+            <span>Meningkatkan produktivitas dan budaya keselamatan</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:.75rem;color:rgba(255,255,255,0.8)">
+            <span style="font-size:1.25rem">✅</span>
+            <span>Skor kuis otomatis dan rekap progres belajar</span>
+          </div>
+        </div>
+        <div style="margin-top:2rem">
+          <a href="pages/kursus.html" class="btn btn-primary btn-lg">Mulai Sekarang →</a>
+        </div>
+      </div>
+      <div>
+        <div class="benefits-grid" style="margin-top:0">
+          <div class="benefit-card" data-aos data-delay="100">
+            <div class="benefit-icon">🛡️</div>
+            <div class="benefit-title">Perlindungan Diri</div>
+            <p class="benefit-desc">Kenali bahaya sebelum terjadi dan lindungi diri dengan pengetahuan yang tepat.</p>
+          </div>
+          <div class="benefit-card" data-aos data-delay="200">
+            <div class="benefit-icon">📊</div>
+            <div class="benefit-title">Skoring Otomatis</div>
+            <p class="benefit-desc">Nilai kuis dihitung langsung, jelas, dan disimpan untuk dipantau kapan saja.</p>
+          </div>
+          <div class="benefit-card" data-aos data-delay="300">
+            <div class="benefit-icon">🎓</div>
+            <div class="benefit-title">Materi Terstruktur</div>
+            <p class="benefit-desc">Kurikulum disusun dari dasar hingga mahir sesuai standar SNI & ISO 45001.</p>
+          </div>
+          <div class="benefit-card" data-aos data-delay="400">
+            <div class="benefit-icon">📱</div>
+            <div class="benefit-title">Akses Kapan Saja</div>
+            <p class="benefit-desc">Belajar dari perangkat apa pun — desktop, tablet, atau smartphone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="section-padding" style="background:linear-gradient(135deg,#FFF5EE 0%,#fff 50%,#EEF3FC 100%)">
+  <div class="container text-center" data-aos>
+    <div class="section-label">🚀 Mulai Sekarang</div>
+    <h2 class="section-title">Siap Menjadi Tenaga Kerja yang Kompeten di Bidang K3?</h2>
+    <p class="section-subtitle" style="margin:0 auto 2rem">
+      Bergabunglah dengan ribuan tenaga kerja yang telah meningkatkan kompetensi K3 mereka melalui K3Learn.
+    </p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="pages/kursus.html" class="btn btn-navy btn-lg">📚 Jelajahi Kursus</a>
+      <a href="pages/kuis.html" class="btn btn-primary btn-lg">📝 Langsung Kerjakan Kuis</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="nav-logo" style="margin-bottom:.5rem">
+          <div class="nav-logo-icon">⛑️</div>
+          <span class="nav-logo-text">K3<span>Learn</span></span>
+        </div>
+        <p class="footer-brand-desc">Platform pembelajaran K3 online yang komprehensif, interaktif, dan mudah diakses untuk semua kalangan tenaga kerja Indonesia.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Kursus</div>
+        <div class="footer-links">
+          <a href="pages/materi.html?id=k3dasar" class="footer-link">Dasar-Dasar K3</a>
+          <a href="pages/materi.html?id=apd" class="footer-link">Alat Pelindung Diri</a>
+          <a href="pages/materi.html?id=kebakaran" class="footer-link">Pencegahan Kebakaran</a>
+          <a href="pages/materi.html?id=p3k" class="footer-link">Pertolongan Pertama</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Fitur</div>
+        <div class="footer-links">
+          <a href="pages/kursus.html" class="footer-link">Daftar Kursus</a>
+          <a href="pages/kuis.html" class="footer-link">Kuis Interaktif</a>
+          <a href="pages/hasil.html" class="footer-link">Hasil & Nilai</a>
+          <a href="pages/hasil.html" class="footer-link">Riwayat Belajar</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Standar</div>
+        <div class="footer-links">
+          <a href="#" class="footer-link">UU No. 1/1970</a>
+          <a href="#" class="footer-link">PP No. 50/2012</a>
+          <a href="#" class="footer-link">ISO 45001:2018</a>
+          <a href="#" class="footer-link">SNI K3</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 K3Learn. Platform Pembelajaran K3 Online.</span>
+      <span style="color:rgba(255,255,255,0.4)">Dirancang untuk keselamatan kerja Indonesia 🇮🇩</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// Mobile menu
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('mobile-open');
+});
+
+// AOS (Animate on Scroll)
+function initAOS() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => { if(el.isIntersecting) el.target.classList.add('aos-animate'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
+}
+
+// Counter animation
+function animateCounter(el, target, suffix='') {
+  let count = 0;
+  const step = target / 60;
+  const timer = setInterval(() => {
+    count = Math.min(count + step, target);
+    el.textContent = Math.floor(count).toLocaleString('id') + suffix;
+    if (count >= target) clearInterval(timer);
+  }, 16);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initAOS();
+  // Responsive benefits grid
+  const benefitsResponsive = document.querySelector('.benefits-responsive');
+  if(window.innerWidth <= 768 && benefitsResponsive) {
+    benefitsResponsive.style.gridTemplateColumns = '1fr';
+    benefitsResponsive.style.gap = '2rem';
+  }
+});
+</script>
+</body>
+</html>
