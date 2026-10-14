@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Materi APD - K3Learn</title>
-  <meta name="description" content="Pelajari Alat Pelindung Diri (APD) secara lengkap - jenis, cara pakai, dan pemeliharaan.">
+  <title>Materi K3 PPLG - K3Learn</title>
+  <meta name="description" content="Modul pembelajaran lengkap Keselamatan dan Kesehatan Kerja (K3) bidang Pengembangan Perangkat Lunak dan GIM (PPLG) - ergonomi koding, kesehatan mata, kelistrikan lab, dan APAR CO2.">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 </head>
 <body>
 
@@ -13,18 +14,18 @@
 <nav class="navbar" id="navbar">
   <div class="container">
     <a href="../index.html" class="nav-logo">
-      <div class="nav-logo-icon">⛑️</div>
-      <span class="nav-logo-text">K3<span>Learn</span></span>
+      <div class="nav-logo-icon">💻</div>
+      <span class="nav-logo-text">K3<span>PPLG</span></span>
     </a>
     <div class="nav-links" id="navLinks">
       <a href="../index.html" class="nav-link">Beranda</a>
-      <a href="kursus.html" class="nav-link active">Kursus K3</a>
+      <a href="kursus.html" class="nav-link active">Kursus K3 PPLG</a>
       <a href="kuis.html" class="nav-link">Kuis</a>
       <a href="hasil.html" class="nav-link">Hasil Saya</a>
     </div>
     <div style="display:flex;align-items:center;gap:.75rem">
-      <a href="kuis.html" class="btn btn-primary">📝 Kerjakan Kuis</a>
-      <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <a href="kuis.html?materi=k3pplg" class="btn btn-primary">📝 Kerjakan Kuis K3 PPLG</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
@@ -35,17 +36,17 @@
     <div class="breadcrumb">
       <a href="../index.html">🏠 Beranda</a>
       <span class="breadcrumb-sep">/</span>
-      <a href="kursus.html">Kursus K3</a>
+      <a href="kursus.html">Kursus K3 PPLG</a>
       <span class="breadcrumb-sep">/</span>
-      <span class="breadcrumb-current" id="currentMateri">Alat Pelindung Diri</span>
+      <span class="breadcrumb-current" id="currentMateri">Modul K3 PPLG</span>
     </div>
     <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:.75rem">
-      <span class="badge badge-orange">🦺 APD</span>
-      <span class="badge badge-gray">⏱️ 40 menit</span>
-      <span class="badge badge-green">📄 5 topik</span>
+      <span class="badge badge-navy">💻 PPLG / Rekayasa Perangkat Lunak</span>
+      <span class="badge badge-gray">⏱️ 45 menit</span>
+      <span class="badge badge-green">📄 5 Topik Inti</span>
     </div>
-    <h1 class="page-header-title" id="materiTitle">Alat Pelindung Diri (APD)</h1>
-    <p class="page-header-subtitle">Pelajari jenis APD, cara pemakaian yang benar, dan pentingnya APD dalam keselamatan kerja</p>
+    <h1 class="page-header-title" id="materiTitle">Panduan Keselamatan & Kesehatan Kerja (K3) PPLG</h1>
+    <p class="page-header-subtitle">Standar ergonomi kerja komputer, kesehatan penglihatan 20-20-20, keselamatan kelistrikan lab, dan budaya kerja sehat programmer</p>
   </div>
 </header>
 
@@ -60,144 +61,42 @@
         <div class="card mb-6" style="margin-bottom:1.5rem">
           <div class="card-body" style="padding:1.25rem">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem">
-              <span style="font-weight:600;font-size:.9375rem;color:#374151">📊 Progres Kursus Ini</span>
-              <span id="progressPct" style="font-weight:700;color:#16A34A;font-size:1rem">2 / 5 Selesai</span>
+              <span style="font-weight:600;font-size:.9375rem;color:#374151">📊 Progres Modul Ini</span>
+              <span id="progressPct" style="font-weight:700;color:#16A34A;font-size:1rem">1 / 5 Selesai</span>
             </div>
             <div class="progress-wrap progress-lg">
-              <div class="progress-bar progress-bar-green" id="progressBar" style="width:40%"></div>
+              <div class="progress-bar progress-bar-green" id="progressBar" style="width:20%"></div>
             </div>
           </div>
         </div>
 
-        <!-- Article Content -->
+        <!-- Article Content Card -->
         <div class="card" style="margin-bottom:1.5rem">
           <div class="card-header" style="display:flex;align-items:center;justify-content:space-between">
-            <div style="font-family:var(--font-display);font-weight:700;color:#152B5E" id="sectionTitle">📍 Topik 1: Pengertian dan Tujuan APD</div>
+            <div style="font-family:var(--font-display);font-weight:700;color:#152B5E" id="sectionTitle">📍 Topik 1: Pengantar K3 di Bidang PPLG & Lab Komputer</div>
             <span class="badge badge-orange" id="sectionBadge">Sedang Dibaca</span>
           </div>
-          <div class="card-body" id="articleContent">
-            <div class="article">
-              <img src="../assets/images/course_apd.jpg" alt="Alat Pelindung Diri" style="margin-bottom:1.5rem;border-radius:1rem">
-
-              <h2>Apa itu Alat Pelindung Diri (APD)?</h2>
-              <p>Alat Pelindung Diri (APD) atau dalam bahasa Inggris dikenal sebagai <strong>Personal Protective Equipment (PPE)</strong> adalah seperangkat alat yang digunakan oleh pekerja untuk melindungi seluruh atau sebagian tubuhnya dari potensi bahaya atau kecelakaan kerja.</p>
-
-              <div class="callout">
-                <strong>💡 Penting Diingat:</strong> APD adalah pertahanan <em>terakhir</em> dalam hierarki pengendalian risiko. Penggunaan APD tidak menghilangkan bahaya, melainkan hanya mengurangi dampak jika terjadi paparan.
-              </div>
-
-              <h2>Dasar Hukum Penggunaan APD</h2>
-              <p>Kewajiban penggunaan APD di tempat kerja diatur dalam beberapa regulasi:</p>
-              <ul>
-                <li><strong>UU No. 1 Tahun 1970</strong> tentang Keselamatan Kerja – Pasal 14 mewajibkan pengusaha menyediakan APD secara cuma-cuma</li>
-                <li><strong>Permenakertrans No. 08/2010</strong> tentang APD – mengatur secara spesifik jenis dan standar APD</li>
-                <li><strong>ISO 45001:2018</strong> – standar internasional sistem manajemen K3</li>
-              </ul>
-
-              <h2>Hierarki Pengendalian Risiko</h2>
-              <p>Sebelum menggunakan APD, pahami dahwa APD berada di urutan terakhir dalam hierarki pengendalian risiko:</p>
-
-              <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:1rem;padding:1.5rem;margin:1.5rem 0">
-                <div style="display:flex;flex-direction:column;gap:.75rem">
-                  <div style="display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,#DC2626,#EF4444);border-radius:.75rem;color:#fff">
-                    <span style="font-weight:800;font-size:1.125rem">1</span>
-                    <div><strong>Eliminasi</strong> – Hapus bahaya dari proses kerja</div>
-                  </div>
-                  <div style="display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,#E85010,#F06A25);border-radius:.75rem;color:#fff">
-                    <span style="font-weight:800;font-size:1.125rem">2</span>
-                    <div><strong>Substitusi</strong> – Ganti dengan yang lebih aman</div>
-                  </div>
-                  <div style="display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,#EAB308,#FBBF24);border-radius:.75rem;color:#fff">
-                    <span style="font-weight:800;font-size:1.125rem">3</span>
-                    <div><strong>Pengendalian Teknik</strong> – Isolasi bahaya secara teknis</div>
-                  </div>
-                  <div style="display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,#16A34A,#22C55E);border-radius:.75rem;color:#fff">
-                    <span style="font-weight:800;font-size:1.125rem">4</span>
-                    <div><strong>Pengendalian Administratif</strong> – SOP, pelatihan, rotasi kerja</div>
-                  </div>
-                  <div style="display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,#152B5E,#1A3576);border-radius:.75rem;color:#fff">
-                    <span style="font-weight:800;font-size:1.125rem">5</span>
-                    <div><strong>APD</strong> – Alat Pelindung Diri (pilihan terakhir)</div>
-                  </div>
-                </div>
-              </div>
-
-              <h2>Jenis-Jenis APD Berdasarkan Bagian Tubuh</h2>
-
-              <h3>🪖 1. Pelindung Kepala (Helm Keselamatan)</h3>
-              <p>Helm keselamatan (safety helmet) melindungi kepala dari benda jatuh, benturan, dan bahaya listrik. Terdapat 3 kelas:</p>
-              <ul>
-                <li><strong>Kelas E (Electrical)</strong> – tahan hingga 20.000 volt, untuk pekerjaan listrik tegangan tinggi</li>
-                <li><strong>Kelas G (General)</strong> – untuk keperluan umum industri</li>
-                <li><strong>Kelas C (Conductive)</strong> – tidak tahan listrik, hanya untuk benturan mekanis</li>
-              </ul>
-
-              <div class="callout callout-warning">
-                <strong>⚠️ Perhatian:</strong> Helm yang pernah terkena benturan keras HARUS diganti meski tidak terlihat rusak. Struktur internalnya bisa sudah lemah.
-              </div>
-
-              <h3>👁️ 2. Pelindung Mata dan Wajah</h3>
-              <ul>
-                <li><strong>Kacamata Safety</strong> – dari partikel terbang, debu, dan sinar UV</li>
-                <li><strong>Goggle</strong> – menutup seluruh area mata, untuk percikan kimia dan debu halus</li>
-                <li><strong>Face Shield</strong> – melindungi seluruh wajah dari percikan logam cair atau bahan kimia</li>
-                <li><strong>Helm Las</strong> – dengan kaca gelap untuk melindungi dari radiasi sinar las</li>
-              </ul>
-
-              <h3>🫁 3. Pelindung Pernapasan</h3>
-              <ul>
-                <li><strong>Masker Kain/Bedah</strong> – untuk debu kasar dan percikan</li>
-                <li><strong>Respirator N95/FFP2</strong> – untuk partikel halus, virus, dan spora jamur</li>
-                <li><strong>Half-Face Respirator</strong> – dengan cartridge filter khusus kimia</li>
-                <li><strong>SCBA</strong> – Self-Contained Breathing Apparatus untuk area IDLH (Immediately Dangerous to Life or Health)</li>
-              </ul>
-
-              <h3>🧤 4. Pelindung Tangan</h3>
-              <ul>
-                <li><strong>Sarung Tangan Kulit</strong> – untuk pekerjaan kasar, las, dan panas</li>
-                <li><strong>Sarung Tangan Karet/Nitrile</strong> – untuk bahan kimia dan cairan berbahaya</li>
-                <li><strong>Sarung Tangan Anti-Potong (Cut-Resistant)</strong> – untuk pekerjaan dengan pisau dan benda tajam</li>
-                <li><strong>Sarung Tangan Isolasi</strong> – untuk pekerjaan listrik tegangan tinggi</li>
-              </ul>
-
-              <div class="callout callout-success">
-                <strong>✅ Tips Penting:</strong> Selalu periksa sarung tangan sebelum digunakan. Adanya lubang kecil pada sarung tangan karet/kimia dapat membuat Anda terpapar bahan berbahaya tanpa disadari!
-              </div>
-
-              <h3>🦺 5. Pelindung Tubuh</h3>
-              <ul>
-                <li><strong>Rompi Safety / Vest Reflektif</strong> – meningkatkan visibilitas di area sibuk kendaraan</li>
-                <li><strong>Baju Tahan Api (FR Clothing)</strong> – untuk pekerjaan di lingkungan berapi/panas</li>
-                <li><strong>Baju Kimia (Chemical Suit)</strong> – tahan terhadap percikan dan paparan bahan kimia</li>
-                <li><strong>Safety Harness</strong> – untuk pekerjaan di ketinggian</li>
-              </ul>
-
-              <h3>👢 6. Pelindung Kaki</h3>
-              <ul>
-                <li><strong>Safety Shoes</strong> – dengan ujung baja, tahan terhadap benda jatuh dan tusukan</li>
-                <li><strong>Rubber Boot</strong> – untuk area basah dan kimia korosif</li>
-                <li><strong>Anti-Static Shoes</strong> – mencegah akumulasi listrik statis di area ATEX</li>
-              </ul>
-            </div>
+          <div class="card-body" id="articleBody">
+            <!-- Dynamic Topic Content loaded via JS -->
           </div>
 
           <!-- ARTICLE NAV -->
           <div class="card-footer">
             <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
-              <button class="btn btn-outline-navy btn-sm" id="btnPrev" onclick="prevTopic()">← Sebelumnya</button>
+              <button class="btn btn-outline-navy btn-sm" id="btnPrev" onclick="prevTopic()">← Topik Sebelumnya</button>
               <button class="btn btn-success btn-sm" id="btnDone" onclick="markDone()">✅ Tandai Selesai</button>
-              <button class="btn btn-primary btn-sm" id="btnNext" onclick="nextTopic()">Selanjutnya →</button>
+              <button class="btn btn-primary btn-sm" id="btnNext" onclick="nextTopic()">Topik Selanjutnya →</button>
             </div>
           </div>
         </div>
 
         <!-- SELESAI SECTION -->
         <div id="materiSelesai" style="display:none">
-          <div class="card" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7);border-color:#86EFAC;text-align:center;padding:2rem">
-            <div style="font-size:3rem;margin-bottom:1rem">🎉</div>
-            <h3 style="color:#15803D;margin-bottom:.5rem">Selamat! Materi APD Selesai!</h3>
-            <p style="color:#166534;margin-bottom:1.5rem">Anda telah menyelesaikan semua topik dalam kursus Alat Pelindung Diri. Saatnya uji pemahaman Anda!</p>
-            <a href="kuis.html?materi=apd" class="btn btn-success btn-lg">📝 Kerjakan Kuis APD →</a>
+          <div class="card" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7);border-color:#86EFAC;text-align:center;padding:2.5rem 1.5rem">
+            <div style="font-size:3.5rem;margin-bottom:1rem">🎉</div>
+            <h3 style="color:#15803D;margin-bottom:.5rem;font-family:var(--font-display)">Luar Biasa! Semua Topik K3 PPLG Selesai!</h3>
+            <p style="color:#166534;margin-bottom:1.5rem;max-width:550px;margin-left:auto;margin-right:auto">Anda telah mempelajari seluruh prinsip dasar K3 untuk programmer: ergonomi duduk, kesehatan mata 20-20-20, kelistrikan lab, APAR CO2, dan budaya 5R. Sekarang uji pemahaman Anda melalui kuis interaktif!</p>
+            <a href="kuis.html?materi=k3pplg" class="btn btn-success btn-lg">📝 Kerjakan Kuis K3 PPLG Sekarang →</a>
           </div>
         </div>
       </div>
@@ -205,59 +104,59 @@
       <!-- SIDEBAR -->
       <div class="course-sidebar">
         <div class="course-sidebar-card">
-          <img src="../assets/images/course_apd.jpg" alt="APD" class="course-sidebar-img">
+          <img src="../assets/images/course_ergonomi.jpg" alt="Ergonomi PPLG" class="course-sidebar-img">
           <div class="course-sidebar-body">
-            <div style="font-family:var(--font-display);font-weight:700;font-size:1rem;color:#111827;margin-bottom:1rem">Alat Pelindung Diri</div>
+            <div style="font-family:var(--font-display);font-weight:700;font-size:1rem;color:#111827;margin-bottom:1rem">K3 Pengembangan Perangkat Lunak & Gim</div>
 
             <div class="course-meta-list">
               <div class="course-meta-item">
                 <div class="course-meta-icon">⏱️</div>
-                <span>Durasi: 40 menit</span>
+                <span>Durasi: 45 menit</span>
               </div>
               <div class="course-meta-item">
                 <div class="course-meta-icon">📄</div>
-                <span>5 Sub-materi</span>
+                <span>5 Sub-Topik Interaktif</span>
               </div>
               <div class="course-meta-item">
                 <div class="course-meta-icon">📝</div>
-                <span>10 Soal Kuis</span>
+                <span>10 Soal Kuis Pilihan Ganda</span>
               </div>
               <div class="course-meta-item">
                 <div class="course-meta-icon">🏆</div>
-                <span>Min. Nilai Lulus: 80</span>
+                <span>Passing Grade: 80</span>
               </div>
             </div>
 
             <div class="divider"></div>
 
-            <div style="font-family:var(--font-display);font-weight:700;font-size:.875rem;color:#374151;margin-bottom:.75rem;text-transform:uppercase;letter-spacing:.06em">📚 Daftar Topik</div>
+            <div style="font-family:var(--font-display);font-weight:700;font-size:.875rem;color:#374151;margin-bottom:.75rem;text-transform:uppercase;letter-spacing:.06em">📚 Daftar Topik Pembelajaran</div>
             <div class="curriculum-list" id="curriculumList">
               <div class="curriculum-item active" onclick="loadTopic(0)" id="topic-0">
                 <div class="curriculum-num active-num" id="num-0">1</div>
-                <div class="curriculum-text">Pengertian dan Tujuan APD</div>
+                <div class="curriculum-text">Pengantar K3 di Dunia PPLG</div>
               </div>
               <div class="curriculum-item" onclick="loadTopic(1)" id="topic-1">
-                <div class="curriculum-num done-num" id="num-1">✓</div>
-                <div class="curriculum-text">Jenis-Jenis APD</div>
+                <div class="curriculum-num" id="num-1">2</div>
+                <div class="curriculum-text">Ergonomi Duduk & Pencegahan CTS</div>
               </div>
               <div class="curriculum-item" onclick="loadTopic(2)" id="topic-2">
-                <div class="curriculum-num done-num" id="num-2">✓</div>
-                <div class="curriculum-text">Cara Pemakaian yang Benar</div>
+                <div class="curriculum-num" id="num-2">3</div>
+                <div class="curriculum-text">Kesehatan Mata & Aturan 20-20-20</div>
               </div>
               <div class="curriculum-item" onclick="loadTopic(3)" id="topic-3">
                 <div class="curriculum-num" id="num-3">4</div>
-                <div class="curriculum-text">Perawatan dan Pemeliharaan</div>
+                <div class="curriculum-text">Kelistrikan Lab & APAR CO2</div>
               </div>
               <div class="curriculum-item" onclick="loadTopic(4)" id="topic-4">
                 <div class="curriculum-num" id="num-4">5</div>
-                <div class="curriculum-text">Standar dan Regulasi APD</div>
+                <div class="curriculum-text">Mental Health, Pomodoro & 5R Lab</div>
               </div>
             </div>
 
             <div class="divider"></div>
-            <a href="kuis.html?materi=apd" class="btn btn-primary btn-full btn-sm">📝 Kerjakan Kuis APD</a>
+            <a href="kuis.html?materi=k3pplg" class="btn btn-primary btn-full btn-sm">📝 Kerjakan Kuis K3 PPLG</a>
             <div style="margin-top:.75rem">
-              <a href="kursus.html" class="btn btn-outline-navy btn-full btn-sm">← Kembali ke Kursus</a>
+              <a href="kursus.html" class="btn btn-outline-navy btn-full btn-sm">← Daftar Kursus Lain</a>
             </div>
           </div>
         </div>
@@ -270,7 +169,7 @@
 <footer class="footer" style="margin-top:0">
   <div class="container">
     <div class="footer-bottom" style="padding-top:1.5rem">
-      <span>© 2026 K3Learn.</span>
+      <span>© 2026 K3Learn PPLG. Platform Edukasi Keselamatan Kerja Programmer.</span>
       <a href="kursus.html" style="color:rgba(255,255,255,0.5)">← Kembali ke Daftar Kursus</a>
     </div>
   </div>
@@ -281,18 +180,219 @@ const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
 document.getElementById('hamburger').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('mobile-open'));
 
+// =============================================
+// TOPIK DATA K3 PPLG
+// =============================================
+const topics = [
+  {
+    title: "📍 Topik 1: Pengantar K3 di Bidang PPLG & Lab Komputer",
+    badge: "Konsep Dasar",
+    content: `
+      <div class="article">
+        <img src="../assets/images/hero_pplg.jpg" alt="Laboratorium PPLG Modern" style="margin-bottom:1.5rem;border-radius:1rem;max-height:360px;width:100%;object-fit:cover">
+
+        <h2>Mengapa K3 Sangat Penting di Bidang PPLG?</h2>
+        <p>Banyak orang mengira bahwa pekerjaan di bidang <strong>Pengembangan Perangkat Lunak dan GIM (PPLG / RPL)</strong> adalah pekerjaan yang paling aman karena hanya duduk di dalam ruangan ber-AC di depan komputer. Anggapan ini adalah <em>mitos yang keliru</em>.</p>
+        
+        <p>Seorang software developer atau game programmer menghabiskan rata-rata <strong>6 hingga 10 jam per hari</strong> di depan layar monitor. Tanpa penerapan K3 yang benar, risiko gangguan kesehatan jangka panjang dan kecelakaan di laboratorium komputer sangat nyata.</p>
+
+        <div class="callout">
+          <strong>💡 Fakta K3 IT:</strong> Lebih dari 70% praktisi IT dan siswa komputer mengalami keluhan muskuloskeletal (nyeri leher dan punggung) serta Computer Vision Syndrome (mata lelah dan kering) akibat ketidaktahuan prinsip ergonomi kerja.
+        </div>
+
+        <h2>Potensi Bahaya K3 di Lingkungan PPLG</h2>
+        <p>Bahaya di laboratorium komputer dan ruang kerja programmer dikelompokkan menjadi beberapa kategori utama:</p>
+        <ul>
+          <li><strong>Bahaya Fisik & Ergonomi:</strong> Postur duduk membungkuk, penempatan monitor yang salah, gerakan mengetik berulang tanpa jeda yang menyebabkan Carpal Tunnel Syndrome (CTS).</li>
+          <li><strong>Bahaya Radiasi & Visual:</strong> Paparan sinar biru (blue light) layar monitor dalam durasi lama yang memicu kelelahan visual dan gangguan siklus tidur.</li>
+          <li><strong>Bahaya Kelistrikan:</strong> Beban berlebih (overload) pada terminal stop kontak, kabel berserakan di lantai yang memicu bahaya tersandung (trip hazard) atau korsleting listrik.</li>
+          <li><strong>Bahaya Kebakaran (Kelas C):</strong> Hubungan arus pendek pada power supply PC, switch jaringan, atau server lab komputer.</li>
+          <li><strong>Bahaya Psikososial:</strong> Stres akibat deadline rilis aplikasi (crunch time), kejenuhan mental (burnout), dan kurangnya istirahat fisik.</li>
+        </ul>
+
+        <h2>Landasan Hukum & Standar K3 di Indonesia</h2>
+        <p>Penerapan K3 di laboratorium kejuruan dan industri software didasarkan pada regulasi resmi:</p>
+        <ul>
+          <li><strong>UU No. 1 Tahun 1970</strong> tentang Keselamatan Kerja – mewajibkan pencegahan kecelakaan kerja dan penyakit akibat kerja di semua tempat kerja.</li>
+          <li><strong>Permenaker No. 5 Tahun 2018</strong> tentang K3 Lingkungan Kerja – memuat pedoman faktor ergonomi, pencahayaan ruangan kantor/lab, dan kenyamanan fisik.</li>
+          <li><strong>SNI 03-6575-2001</strong> tentang Tata Cara Perancangan Sistem Pencahayaan Buatan pada Bangunan Gedung (termasuk ruang komputer 300 - 500 Lux).</li>
+        </ul>
+      </div>
+    `
+  },
+  {
+    title: "📍 Topik 2: Ergonomi Duduk Programmer & Pencegahan CTS",
+    badge: "Ergonomi & Fisik",
+    content: `
+      <div class="article">
+        <img src="../assets/images/course_ergonomi.jpg" alt="Postur Duduk Ergonomis" style="margin-bottom:1.5rem;border-radius:1rem;max-height:360px;width:100%;object-fit:cover">
+
+        <h2>Prinsip Ergonomi Postur Tubuh Programmer</h2>
+        <p>Ergonomi adalah ilmu yang mempelajari interaksi antara manusia dengan lingkungan kerjanya demi kenyamanan dan keselamatan maksimal. Saat melakukan aktivitas coding berjam-jam, terapkan rumus sudut netral berikut:</p>
+
+        <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:1rem;padding:1.5rem;margin:1.5rem 0">
+          <div style="display:flex;flex-direction:column;gap:.75rem">
+            <div style="display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,#152B5E,#1E3F8F);border-radius:.75rem;color:#fff">
+              <span style="font-weight:800;font-size:1.125rem">1</span>
+              <div><strong>Sudut Siku 90° – 100°:</strong> Lengan atas menggantung bebas dan rileks, lengan bawah sejajar permukaan meja keyboard.</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,#2563EB,#3B82F6);border-radius:.75rem;color:#fff">
+              <span style="font-weight:800;font-size:1.125rem">2</span>
+              <div><strong>Sudut Panggul & Lutut 90° – 100°:</strong> Telapak kaki menapak rata di lantai atau gunakan <em>footrest</em> bila kaki menggantung.</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,#059669,#10B981);border-radius:.75rem;color:#fff">
+              <span style="font-weight:800;font-size:1.125rem">3</span>
+              <div><strong>Lumbar Support (Punggung Bawah):</strong> Sandaran kursi menyangga lengkungan punggung bagian bawah secara alami.</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:linear-gradient(135deg,#D97706,#F59E0B);border-radius:.75rem;color:#fff">
+              <span style="font-weight:800;font-size:1.125rem">4</span>
+              <div><strong>Posisi Pergelangan Tangan Netral:</strong> Jangan menumpu pergelangan dalam posisi tertekuk ke atas atau ke samping saat mengetik.</div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Mengenal Carpal Tunnel Syndrome (CTS)</h2>
+        <p><strong>Carpal Tunnel Syndrome (CTS)</strong> adalah cedera akibat gerakan berulang (Repetitive Strain Injury / RSI) di mana saraf medianus yang melewati lorong sempit di pergelangan tangan terjepit atau mengalami peradangan.</p>
+        
+        <h3>Gejala Awal CTS:</h3>
+        <ul>
+          <li>Kesemutan dan mati rasa pada ibu jari, jari telunjuk, dan jari tengah.</li>
+          <li>Rasa terbakar atau nyeri yang menjalar dari pergelangan tangan hingga lengan atas saat koding.</li>
+          <li>Kelemahan pada otot telapak tangan hingga sulit menggenggam mouse atau mengetik cepat.</li>
+        </ul>
+
+        <div class="callout callout-warning">
+          <strong>⚠️ Cara Pencegahan CTS:</strong> Gunakan mousepad berbahan gel yang memiliki penyangga pergelangan (wrist rest), sesuaikan tinggi meja, dan lakukan peregangan jari serta pergelangan tangan setiap 1 jam.
+        </div>
+      </div>
+    `
+  },
+  {
+    title: "📍 Topik 3: Kesehatan Mata & Aturan 20-20-20 (CVS)",
+    badge: "Kesehatan Mata",
+    content: `
+      <div class="article">
+        <img src="../assets/images/course_hazard.jpg" alt="Pemeriksaan Kesehatan Penglihatan" style="margin-bottom:1.5rem;border-radius:1rem;max-height:360px;width:100%;object-fit:cover">
+
+        <h2>Mencegah Computer Vision Syndrome (CVS)</h2>
+        <p><strong>Computer Vision Syndrome (CVS)</strong> adalah sekelompok masalah mata dan penglihatan yang timbul akibat penggunaan komputer, laptop, tablet, atau smartphone secara berlebihan tanpa jeda.</p>
+
+        <p>Saat menatap layar monitor komputer secara fokus (seperti saat mencari bug atau menulis ribuan baris kode), frekuensi kedipan mata manusia menurun dari normalnya <strong>15-20 kali per menit</strong> menjadi hanya <strong>5-7 kali per menit</strong>. Hal ini menyebabkan air mata menguap cepat dan mata menjadi kering.</p>
+
+        <div class="callout callout-success">
+          <strong>👁️ Aturan Emas 20-20-20:</strong>
+          <br>Setiap <strong>20 menit</strong> menatap layar monitor:
+          <br>Istirahatkan mata Anda dengan melihat objek sejauh <strong>20 kaki</strong> (sekitar 6 meter)
+          <br>Selama minimal <strong>20 detik</strong>.
+          <br><em>Tindakan sederhana ini melemaskan otot siliaris mata yang menegang dan merangsang produksi air mata alami.</em>
+        </div>
+
+        <h2>Pedoman Penataan Monitor Komputer</h2>
+        <ul>
+          <li><strong>Jarak Layar:</strong> Tempatkan monitor pada jarak 50 hingga 70 cm dari mata (kira-kira sepanjang jangkauan satu lengan).</li>
+          <li><strong>Ketinggian Layar:</strong> Tepi atas monitor harus sejajar atau sedikit di bawah garis horizontal mata. Pandangan mata ke tengah layar membentuk sudut 15° hingga 20° ke bawah.</li>
+          <li><strong>Pencahayaan & Silau (Anti-Glare):</strong> Jangan posisikan monitor langsung menghadap jendela atau membelakangi lampu terang untuk menghindari pantulan silau yang menyiksa mata.</li>
+          <li><strong>Pengaturan Tampilan:</strong> Gunakan ukuran font yang nyaman dibaca (minimal 14-16px pada IDE), atur kontras teks yang tajam, dan aktifkan fitur <em>Night Light</em> atau filter sinar biru pada sistem operasi.</li>
+        </ul>
+      </div>
+    `
+  },
+  {
+    title: "📍 Topik 4: Keselamatan Kelistrikan Lab & APAR CO2",
+    badge: "Kelistrikan & APAR",
+    content: `
+      <div class="article">
+        <img src="../assets/images/course_fire.jpg" alt="APAR CO2 di Ruang Komputer" style="margin-bottom:1.5rem;border-radius:1rem;max-height:360px;width:100%;object-fit:cover">
+
+        <h2>Bahaya Kelistrikan di Laboratorium Komputer</h2>
+        <p>Laboratorium PPLG biasanya memiliki puluhan unit PC, server, proyektor, dan router yang beroperasi bersamaan. Beban listrik yang terkonsentrasi ini memerlukan disiplin keselamatan tinggi:</p>
+
+        <ul>
+          <li><strong>Dilarang Melakukan Daisy-Chaining:</strong> Jangan pernah menyambung terminal stop kontak rol ke terminal stop kontak lainnya. Hal ini melampaui batas kapasitas ampere kabel dan memicu korsleting serta kebakaran.</li>
+          <li><strong>Manajemen Kabel (Cable Ducting):</strong> Semua kabel data dan daya harus tertata rapi di dalam trunking atau cable duct di bawah meja, tidak boleh menggelantung atau melintang di lorong jalan karena dapat membuat orang tersandung.</li>
+          <li><strong>Penggunaan UPS & Grounding:</strong> Pastikan seluruh soket listrik memiliki sistem pentanahan (grounding) yang baik untuk mencegah kejutan listrik saat menyentuh casing PC, serta dilengkapi UPS untuk perlindungan lonjakan daya.</li>
+        </ul>
+
+        <h2>Proteksi Kebakaran Kelas C (Peralatan Listrik Elektronik)</h2>
+        <p>Kebakaran yang bersumber dari peralatan listrik bertegangan diklasifikasikan sebagai <strong>Kebakaran Kelas C</strong>.</p>
+
+        <div class="callout callout-warning">
+          <strong>🚨 PERINGATAN KERAS:</strong> DILARANG menggunakan APAR jenis AIR atau BUSA (FOAM) pada kebakaran peralatan komputer aktif! Air adalah konduktor listrik yang dapat menghantarkan arus bertegangan tinggi ke tubuh pemadam dan menyebabkan kematian akibat sengatan listrik.
+        </div>
+
+        <h3>Jenis APAR yang Wajib Digunakan di Lab IT:</h3>
+        <ul>
+          <li><strong>APAR Gas CO2 (Karbon Dioksida):</strong> Mengusir oksigen dari titik api, mendinginkan suhu, tidak menghantarkan listrik (non-konduktif), dan tidak meninggalkan residu bubuk yang merusak komponen elektronik.</li>
+          <li><strong>Clean Agent (Gas Halon Replacement / FM200):</strong> Gas bersih yang sangat ramah terhadap server dan motherboard komputer.</li>
+        </ul>
+
+        <h3>Langkah Tanggap Darurat Kebakaran Listrik:</h3>
+        <ol>
+          <li>Segera tekan tombol <strong>Emergency Power Off (EPO)</strong> atau matikan saklar MCB utama laboratorium untuk memutus pasokan arus listrik.</li>
+          <li>Ambil tabung APAR CO2 dan operasikan dengan metode <strong>PASS</strong>:
+            <br><strong>P (Pull)</strong>: Cabut segel pin pengaman.
+            <br><strong>A (Aim)</strong>: Arahkan nozzle ke pangkal api.
+            <br><strong>S (Squeeze)</strong>: Tekan tuas katup.
+            <br><strong>S (Sweep)</strong>: Sapukan corong dari sisi ke sisi secara merata.
+          </li>
+          <li>Jika api tidak terkendali, segera lakukan evakuasi melalui jalur darurat menuju titik kumpul (assembly point).</li>
+        </ol>
+      </div>
+    `
+  },
+  {
+    title: "📍 Topik 5: Mental Health, Pomodoro & Budaya 5R Lab PPLG",
+    badge: "Produktivitas & 5R",
+    content: `
+      <div class="article">
+        <img src="../assets/images/course_emergency.jpg" alt="Budaya Kerja Rapi & Teratur" style="margin-bottom:1.5rem;border-radius:1rem;max-height:360px;width:100%;object-fit:cover">
+
+        <h2>Kesehatan Mental & Pencegahan Burnout Programmer</h2>
+        <p>Pengembangan perangkat lunak dan gim membutuhkan fokus kognitif yang intensif. Masalah logika algoritma rumit, error debugging yang tak kunjung selesai, serta tenggat waktu (deadline) proyek dapat memicu stres kronis dan <em>burnout</em>.</p>
+
+        <h3>Penerapan Metode Pomodoro Saat Coding:</h3>
+        <p>Gunakan teknik manajemen waktu Pomodoro untuk menjaga kejernihan berpikir:</p>
+        <ul>
+          <li><strong>25 Menit:</strong> Bekerja fokus penuh pada satu modul kode tanpa distraksi media sosial.</li>
+          <li><strong>5 Menit:</strong> Istirahat sejenak — berdiri, minum air putih, dan lakukan peregangan otot leher serta punggung.</li>
+          <li><strong>Setelah 4 Siklus:</strong> Ambil istirahat lebih panjang (15 - 30 menit) untuk relaksasi total.</li>
+        </ul>
+
+        <h2>Penerapan Budaya 5R di Laboratorium Komputer PPLG</h2>
+        <p>Budaya 5R (adaptasi dari konsep 5S Jepang) adalah kunci terciptanya laboratorium PPLG yang aman, bersih, dan berstandar industri profesional:</p>
+
+        <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:1rem;padding:1.5rem;margin:1.5rem 0">
+          <div style="display:flex;flex-direction:column;gap:.75rem">
+            <div style="padding:.75rem 1rem;background:#EEF2FF;border-left:4px solid #4F46E5;border-radius:.5rem">
+              <strong>1. Ringkas (Seiri):</strong> Singkirkan barang yang tidak diperlukan dari meja praktikum, jangan tumpuk kertas atau komponen bekas di atas CPU.
+            </div>
+            <div style="padding:.75rem 1rem;background:#F0FDF4;border-left:4px solid #16A34A;border-radius:.5rem">
+              <strong>2. Rapi (Seiton):</strong> Rapikan keyboard, mouse, headset, dan susun kursi masuk ke kolong meja setelah selesai digunakan.
+            </div>
+            <div style="padding:.75rem 1rem;background:#FEF3C7;border-left:4px solid #D97706;border-radius:.5rem">
+              <strong>3. Resik (Seiso):</strong> Bersihkan debu pada kisi ventilasi monitor, CPU, dan keyboard agar terhindar dari overheat. DILARANG membawa makanan & minuman manis ke meja PC!
+            </div>
+            <div style="padding:.75rem 1rem;background:#F5F3FF;border-left:4px solid #7C3AED;border-radius:.5rem">
+              <strong>4. Rawat (Seiketsu):</strong> Pertahankan kondisi bersih dan aman dengan mematuhi SOP start-up dan shutdown komputer melalui sistem operasi (bukan cabut kabel).
+            </div>
+            <div style="padding:.75rem 1rem;background:#FFF1F2;border-left:4px solid #E11D48;border-radius:.5rem">
+              <strong>5. Rajin (Shitsuke):</strong> Jadikan kedisiplinan K3 sebagai kebiasaan sehari-hari setiap kali memasuki lab komputer.
+            </div>
+          </div>
+        </div>
+
+        <div class="callout callout-success">
+          <strong>🎯 Komitmen Programmer Sehat:</strong> Kode yang berkualitas lahir dari tubuh yang bugar dan pikiran yang jernih. Selalu prioritaskan keselamatan diri sebelum menuntaskan baris kode berikutnya!
+        </div>
+      </div>
+    `
+  }
+];
+
 // Topic state
 let currentTopic = 0;
-const totalTopics = 5;
-const completedTopics = new Set([1, 2]); // Topics 1,2 already done (0-indexed)
-
-const topicTitles = [
-  '📍 Topik 1: Pengertian dan Tujuan APD',
-  '📍 Topik 2: Jenis-Jenis APD',
-  '📍 Topik 3: Cara Pemakaian yang Benar',
-  '📍 Topik 4: Perawatan dan Pemeliharaan',
-  '📍 Topik 5: Standar dan Regulasi APD'
-];
+const totalTopics = topics.length;
+const completedTopics = new Set([0]); // Topic 0 done by default
 
 function updateProgress() {
   const done = completedTopics.size;
@@ -303,6 +403,16 @@ function updateProgress() {
 
 function loadTopic(idx) {
   currentTopic = idx;
+  const t = topics[idx];
+  
+  // Update header & badges
+  document.getElementById('sectionTitle').textContent = t.title;
+  document.getElementById('sectionBadge').textContent = completedTopics.has(idx) ? 'Selesai ✓' : 'Sedang Dibaca';
+  document.getElementById('sectionBadge').className = completedTopics.has(idx) ? 'badge badge-green' : 'badge badge-orange';
+  
+  // Update content
+  document.getElementById('articleBody').innerHTML = t.content;
+  
   // Update sidebar highlights
   for(let i = 0; i < totalTopics; i++) {
     const item = document.getElementById('topic-' + i);
@@ -320,9 +430,10 @@ function loadTopic(idx) {
       num.textContent = (i + 1);
     }
   }
-  document.getElementById('sectionTitle').textContent = topicTitles[idx];
+  
   document.getElementById('btnPrev').disabled = idx === 0;
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('btnNext').disabled = idx === totalTopics - 1;
+  window.scrollTo({ top: 120, behavior: 'smooth' });
 }
 
 function markDone() {
@@ -333,16 +444,36 @@ function markDone() {
   document.getElementById('sectionBadge').textContent = 'Selesai ✓';
   document.getElementById('sectionBadge').className = 'badge badge-green';
   updateProgress();
+  
   if(completedTopics.size === totalTopics) {
     document.getElementById('materiSelesai').style.display = 'block';
     document.getElementById('materiSelesai').scrollIntoView({ behavior: 'smooth' });
+  } else if(currentTopic < totalTopics - 1) {
+    loadTopic(currentTopic + 1);
   }
 }
 
 function prevTopic() { if(currentTopic > 0) loadTopic(currentTopic - 1); }
 function nextTopic() { if(currentTopic < totalTopics - 1) loadTopic(currentTopic + 1); }
 
-updateProgress();
+// Check query param
+const urlParams = new URLSearchParams(window.location.search);
+const idParam = urlParams.get('id');
+if (idParam === 'mata') {
+  currentTopic = 2;
+} else if (idParam === 'listrik' || idParam === 'apar') {
+  currentTopic = 3;
+} else if (idParam === 'mental' || idParam === 'sop') {
+  currentTopic = 4;
+} else if (idParam === 'ergonomi') {
+  currentTopic = 1;
+}
+
+// Initial render
+document.addEventListener('DOMContentLoaded', () => {
+  loadTopic(currentTopic);
+  updateProgress();
+});
 </script>
 </body>
 </html>

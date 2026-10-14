@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kuis K3 - K3Learn</title>
-  <meta name="description" content="Kuis interaktif pilihan ganda untuk menguji pemahaman K3 Anda dengan penilaian otomatis.">
+  <title>Kuis K3 PPLG - K3Learn</title>
+  <meta name="description" content="Kuis interaktif pilihan ganda Keselamatan dan Kesehatan Kerja (K3) untuk bidang Pengembangan Perangkat Lunak dan GIM (PPLG) dengan penilaian otomatis.">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 </head>
 <body>
 
@@ -13,18 +14,18 @@
 <nav class="navbar" id="navbar">
   <div class="container">
     <a href="../index.html" class="nav-logo">
-      <div class="nav-logo-icon">⛑️</div>
-      <span class="nav-logo-text">K3<span>Learn</span></span>
+      <div class="nav-logo-icon">💻</div>
+      <span class="nav-logo-text">K3<span>PPLG</span></span>
     </a>
     <div class="nav-links" id="navLinks">
       <a href="../index.html" class="nav-link">Beranda</a>
-      <a href="kursus.html" class="nav-link">Kursus K3</a>
+      <a href="kursus.html" class="nav-link">Kursus K3 PPLG</a>
       <a href="kuis.html" class="nav-link active">Kuis</a>
       <a href="hasil.html" class="nav-link">Hasil Saya</a>
     </div>
     <div style="display:flex;align-items:center;gap:.75rem">
       <a href="kursus.html" class="btn btn-outline">📚 Belajar Dulu</a>
-      <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
@@ -37,8 +38,8 @@
     <div class="container">
       <div class="quiz-topbar-inner">
         <div>
-          <div class="quiz-title" id="quizTitle">📝 Kuis APD - Alat Pelindung Diri</div>
-          <div style="font-size:.8125rem;color:#6B7280;margin-top:.125rem">10 soal pilihan ganda • Nilai minimal lulus: 80</div>
+          <div class="quiz-title" id="quizTitle">📝 Kuis K3 PPLG - Ergonomi, Lab & Keselamatan IT</div>
+          <div style="font-size:.8125rem;color:#6B7280;margin-top:.125rem">10 soal pilihan ganda • Nilai minimal kelulusan: 80</div>
         </div>
         <div style="display:flex;align-items:center;gap:1.5rem">
           <div class="quiz-timer" id="timerDisplay">⏱️ 20:00</div>
@@ -100,15 +101,15 @@
 <div class="modal-overlay" id="submitModal">
   <div class="modal">
     <div class="modal-icon modal-icon-warning">📋</div>
-    <h3 style="text-align:center;margin-bottom:.5rem;font-family:var(--font-display)">Kumpulkan Jawaban?</h3>
+    <h3 style="text-align:center;margin-bottom:.5rem;font-family:var(--font-display)">Kumpulkan Jawaban Kuis?</h3>
     <p style="text-align:center;color:#6B7280;margin-bottom:1.5rem;font-size:.9375rem" id="modalDesc">Anda telah menjawab <strong id="modalAnswered">0</strong> dari <strong>10</strong> soal.</p>
 
     <div id="unansweredWarn" style="display:none;background:#FFF5EE;border:1px solid #FEE4CF;border-radius:.75rem;padding:1rem;margin-bottom:1.25rem;font-size:.875rem;color:#C4430A">
-      ⚠️ <strong>Perhatian:</strong> Masih ada <span id="unansweredCount">0</span> soal yang belum dijawab. Soal yang tidak dijawab akan dianggap salah.
+      ⚠️ <strong>Perhatian:</strong> Masih ada <span id="unansweredCount">0</span> soal yang belum dijawab. Soal yang tidak dijawab akan dihitung sebagai salah.
     </div>
 
     <div style="display:flex;gap:.75rem">
-      <button class="btn btn-outline-navy btn-full" onclick="closeSubmitModal()">← Kembali Kerjakan</button>
+      <button class="btn btn-outline-navy btn-full" onclick="closeSubmitModal()">← Lanjutkan Kerjakan</button>
       <button class="btn btn-primary btn-full" onclick="submitQuiz()">✅ Ya, Kumpulkan</button>
     </div>
   </div>
@@ -123,68 +124,128 @@ window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', wind
 document.getElementById('hamburger').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('mobile-open'));
 
 // =============================================
-// QUIZ DATA
+// K3 PPLG QUIZ DATA (10 Soal Komprehensif)
 // =============================================
 const quizData = [
   {
-    q: "Apakah singkatan dari APD dalam konteks keselamatan kerja?",
-    options: ["Alat Pengaman Daerah", "Alat Pelindung Diri", "Alat Penanda Daerah", "Alat Pengamanan Darurat"],
-    answer: 1,
-    explanation: "APD adalah singkatan dari Alat Pelindung Diri (Personal Protective Equipment), yaitu perlengkapan yang dipakai pekerja untuk melindungi tubuh dari bahaya di tempat kerja."
-  },
-  {
-    q: "Dalam hierarki pengendalian risiko K3, pada urutan keberapa APD berada?",
-    options: ["Pertama – paling utama", "Kedua setelah eliminasi", "Ketiga bersama substitusi", "Terakhir – paling akhir"],
-    answer: 3,
-    explanation: "APD berada di urutan TERAKHIR (kelima) dalam hierarki pengendalian risiko. Hierarki dari atas adalah: Eliminasi → Substitusi → Pengendalian Teknik → Pengendalian Administratif → APD."
-  },
-  {
-    q: "Helm keselamatan kelas E (Electrical) dirancang untuk menahan tegangan listrik hingga berapa volt?",
-    options: ["1.000 volt", "5.000 volt", "20.000 volt", "50.000 volt"],
+    q: "Berapakah jarak ideal antara mata programmer dengan layar monitor komputer saat bekerja untuk mencegah kelelahan visual dan radiasi cahaya?",
+    options: [
+      "10 – 20 cm",
+      "25 – 35 cm",
+      "50 – 70 cm (kurang lebih sepanjang jangkauan satu lengan)",
+      "100 – 150 cm"
+    ],
     answer: 2,
-    explanation: "Helm kelas E (Electrical) dirancang untuk melindungi dari paparan listrik hingga 20.000 volt, sesuai standar ANSI Z89.1. Helm ini digunakan untuk pekerjaan listrik tegangan tinggi."
+    topic: "Kesehatan Mata & Ergonomi Layar",
+    explanation: "Jarak ideal mata ke layar monitor adalah 50 – 70 cm (kurang lebih sepanjang rentangan lengan pengguna) dengan posisi tepi atas monitor sejajar atau sedikit di bawah garis horizontal mata (sudut pandang 15 – 20 derajat)."
   },
   {
-    q: "Apa yang harus dilakukan terhadap helm keselamatan yang pernah terkena benturan keras?",
-    options: ["Tetap digunakan jika tidak ada kerusakan terlihat", "Dibersihkan dan dilanjutkan penggunaan", "Segera diganti dengan helm baru", "Dicat ulang dan digunakan kembali"],
+    q: "Dalam dunia programming dan aktivitas komputer intensif, apa arti dari metode istirahat mata 'Aturan 20-20-20'?",
+    options: [
+      "Bekerja 20 jam, istirahat 20 menit, tidur 20 jam",
+      "Setiap 20 menit menatap layar, istirahatkan mata dengan melihat objek berjarak 20 kaki (6 meter) selama minimal 20 detik",
+      "Mengedipkan mata 20 kali setiap 20 detik pada layar monitor berukuran 20 inci",
+      "Menurunkan kecerahan monitor ke level 20% selama 20 menit pada jam 20:00"
+    ],
+    answer: 1,
+    topic: "Aturan 20-20-20 & Mata",
+    explanation: "Aturan 20-20-20 adalah rekomendasi medis oftalmologi untuk mencegah Computer Vision Syndrome (CVS): setiap 20 menit bekerja di depan layar, alihkan pandangan ke objek sejauh 20 kaki (sekitar 6 meter) selama 20 detik agar otot siliaris mata dapat rileks."
+  },
+  {
+    q: "Gangguan pada pergelangan tangan akibat penekanan saraf medianus yang sering dialami oleh programmer karena mengetik dengan pergelangan tertekuk dalam waktu lama disebut:",
+    options: [
+      "Carpal Tunnel Syndrome (CTS)",
+      "Vertigo Otot",
+      "Astigmatisme Komputer",
+      "Scoliosis Juvenil"
+    ],
+    answer: 0,
+    topic: "Ergonomi & Sindrom CTS",
+    explanation: "Carpal Tunnel Syndrome (CTS) adalah kondisi kesemutan, mati rasa, atau nyeri pada tangan yang disebabkan oleh tekanan berulang pada saraf medianus di pergelangan tangan. Hal ini dapat dicegah dengan menjaga posisi pergelangan tangan tetap netral/lurus dan menggunakan wrist rest."
+  },
+  {
+    q: "Jika terjadi korsleting listrik yang memicu percikan api di laboratorium komputer atau ruang server (kebakaran kelas C), jenis APAR manakah yang WAJIB digunakan?",
+    options: [
+      "APAR jenis Busa Cair (Foam)",
+      "APAR jenis Air Bertekanan (Water Pressurized)",
+      "APAR jenis Gas Karbon Dioksida (CO2) atau Clean Agent",
+      "Ember berisi air sabun dan spons basah"
+    ],
     answer: 2,
-    explanation: "Helm yang pernah terkena benturan keras HARUS segera diganti meski tidak ada kerusakan yang terlihat. Benturan keras dapat merusak struktur internal helm yang tidak tampak dari luar."
+    topic: "Proteksi Kebakaran APAR CO2",
+    explanation: "Untuk kebakaran kelas C (peralatan listrik/elektronik bertegangan), WAJIB menggunakan APAR Karbon Dioksida (CO2) atau Clean Agent karena bersifat non-konduktif dan tidak meninggalkan residu cair yang dapat menyebabkan sengatan listrik atau merusak sirkuit."
   },
   {
-    q: "Jenis sarung tangan apa yang paling tepat digunakan saat bekerja dengan bahan kimia korosif?",
-    options: ["Sarung tangan kulit", "Sarung tangan nitrile/karet", "Sarung tangan kain tebal", "Sarung tangan anti-potong"],
+    q: "Mengapa menghubungkan beberapa terminal stop kontak secara berantai (daisy chaining / mencolokkan roll kabel ke roll kabel lain) sangat dilarang di lab PPLG?",
+    options: [
+      "Karena memperlambat kecepatan koneksi WiFi di laboratorium",
+      "Karena menimbulkan risiko beban arus berlebih (overload) yang memicu panas ekstrem dan kebakaran kabel",
+      "Karena lisensi compiler bahasa pemrograman bisa kadaluarsa",
+      "Karena komputer siswa akan otomatis logout dari sistem"
+    ],
     answer: 1,
-    explanation: "Sarung tangan nitrile atau karet (rubber gloves) adalah pilihan yang tepat untuk bekerja dengan bahan kimia korosif karena tahan terhadap berbagai jenis bahan kimia."
+    topic: "Kelistrikan Lab Komputer",
+    explanation: "Daisy-chaining atau menumpuk terminal stop kontak melebihi kapasitas arus kabel dapat memicu beban berlebih (overload), melelehkan isolasi tembaga kabel, menimbulkan percikan api, dan berakibat fatal pada kebakaran lab komputer."
   },
   {
-    q: "Regulasi Indonesia yang secara spesifik mengatur tentang APD di tempat kerja adalah:",
-    options: ["UU No. 13 Tahun 2003", "Permenakertrans No. 08 Tahun 2010", "PP No. 50 Tahun 2012", "Kepmenaker No. 187 Tahun 1999"],
+    q: "SOP laboratorium komputer PPLG melarang keras membawa makanan dan minuman terbuka ke area meja workstation. Alasan utama aturan K3 ini adalah:",
+    options: [
+      "Mencegah tumpahan cairan yang memicu korsleting listrik (short circuit), sengatan listrik, dan kerusakan hardware permanen",
+      "Agar siswa tidak mengantuk saat mendengarkan penjelasan materi",
+      "Mencegah hilangnya konsentrasi saat debugging program",
+      "Agar meja praktikum tetap terlihat seperti kantor baru"
+    ],
+    answer: 0,
+    topic: "SOP & Tata Tertib Lab PPLG",
+    explanation: "Cairan merupakan konduktor listrik yang sangat berbahaya bagi peralatan komputasi. Tumpahan air pada keyboard, motherboard, atau stop kontak dapat memicu korsleting langsung, sengatan listrik pada pengguna, dan kerusakan fatal perangkat."
+  },
+  {
+    q: "Saat merakit PC, mengganti modul RAM, atau membersihkan bagian dalam server lab, teknisi/programmer dianjurkan menggunakan gelang antistatis (anti-static wrist strap). Tujuannya adalah:",
+    options: [
+      "Mencegah tangan tergores bagian sudut casing PC yang tajam",
+      "Mengalirkan muatan listrik statis dari tubuh manusia ke ground agar tidak merusak komponen mikroelektronika sensitif (ESD)",
+      "Mempercepat kecepatan transfer clock prosesor",
+      "Menahan bobot komponen casing PC agar tidak terjatuh"
+    ],
     answer: 1,
-    explanation: "Permenakertrans No. 08 Tahun 2010 tentang Alat Pelindung Diri secara spesifik mengatur jenis, standar, dan kewajiban penggunaan APD di tempat kerja Indonesia."
+    topic: "Hardware & Proteksi ESD",
+    explanation: "Electrostatic Discharge (ESD) atau lonjakan muatan listrik statis tubuh manusia dapat mencapai ribuan volt. Meski tidak membahayakan manusia, tegangan ini sanggup merusak sirkuit mikroprosesor dan IC RAM. Gelang antistatis berfungsi menyalurkan muatan tersebut secara aman ke grounding."
   },
   {
-    q: "Alat pelindung pernapasan yang paling sesuai untuk digunakan di area yang mengandung gas berbahaya dengan konsentrasi tinggi (IDLH) adalah:",
-    options: ["Masker kain biasa", "Respirator N95", "SCBA (Self-Contained Breathing Apparatus)", "Half-face respirator biasa"],
-    answer: 2,
-    explanation: "SCBA (Self-Contained Breathing Apparatus) adalah alat pelindung pernapasan yang wajib digunakan di area IDLH (Immediately Dangerous to Life or Health), karena menyediakan udara bersih dari tangki terpisah."
-  },
-  {
-    q: "Rompi safety/rompi reflektif terutama berfungsi untuk:",
-    options: ["Melindungi dari benda jatuh", "Meningkatkan visibilitas pekerja di area sibuk", "Melindungi dari percikan api", "Menyerap benturan fisik"],
+    q: "Berdasarkan prinsip ergonomi kerja komputer, berapakah sudut ideal antara lengan atas dengan lengan bawah (siku) saat mengetik pada keyboard?",
+    options: [
+      "Sudut lancip sekitar 30 – 45 derajat",
+      "Sudut sekitar 90 – 100 derajat dengan posisi pergelangan tangan rileks dan sejajar meja",
+      "Lengan harus lurus tegak ke depan 180 derajat",
+      "Tangan menggantung bebas ke bawah tanpa sandaran"
+    ],
     answer: 1,
-    explanation: "Rompi safety/reflektif berfungsi utama untuk meningkatkan visibilitas pekerja, terutama di area dengan lalu lintas kendaraan berat atau kondisi cahaya rendah."
+    topic: "Ergonomi Postur Duduk",
+    explanation: "Sudut siku yang optimal saat mengetik di keyboard dan menggerakkan mouse adalah 90 – 100 derajat. Posisi ini memastikan pundak tidak tegang, pergelangan tangan tetap dalam sudut netral, dan peredaran darah ke jari-jari tetap lancar."
   },
   {
-    q: "Siapa yang berkewajiban menyediakan APD secara cuma-cuma kepada pekerja berdasarkan UU No. 1 Tahun 1970?",
-    options: ["Pekerja itu sendiri", "Pemerintah melalui Kemenaker", "Pengusaha/pemberi kerja", "Serikat pekerja"],
-    answer: 2,
-    explanation: "Berdasarkan UU No. 1 Tahun 1970 Pasal 14, pengusaha wajib menyediakan APD secara cuma-cuma kepada semua pekerja yang membutuhkannya sesuai dengan jenis pekerjaan dan risiko yang dihadapi."
-  },
-  {
-    q: "Sebelum menggunakan sarung tangan karet untuk pekerjaan kimia, apa yang harus diperiksa terlebih dahulu?",
-    options: ["Warna dan merek sarung tangan", "Apakah ada lubang atau kerusakan pada sarung tangan", "Ukuran sarung tangan sudah sesuai", "Tanggal kadaluarsa tertera dengan jelas"],
+    q: "Seorang developer game sering menghadapi bug rumit dan deadline rilis (crunch time) yang memicu stres mental tinggi. Praktik kerja K3 kognitif manakah yang paling direkomendasikan?",
+    options: [
+      "Memprogram terus selama 10 jam nonstop dengan konsumsi minuman berenergi tinggi",
+      "Menerapkan teknik Pomodoro (25 menit koding fokus, 5 menit jeda peregangan otot ringan) serta menjaga hidrasi air putih",
+      "Menghindari minum air putih agar tidak membuang waktu ke toilet",
+      "Mematikan lampu ruangan dan menyetel kecerahan layar monitor 100%"
+    ],
     answer: 1,
-    explanation: "Sebelum menggunakan sarung tangan karet/kimia, WAJIB memeriksa apakah ada lubang atau kerusakan. Lubang kecil sekalipun dapat menyebabkan paparan bahan kimia berbahaya tanpa disadari."
+    topic: "Kesehatan Mental & Pomodoro",
+    explanation: "Teknik Pomodoro (25 menit kerja fokus + 5 menit istirahat peregangan) terbukti efektif menjaga daya konsentrasi, mencegah burnout / kelelahan mental, melancarkan sirkulasi darah, serta mengendurkan ketegangan otot leher dan pundak programmer."
+  },
+  {
+    q: "Jika terjadi korsleting listrik yang mengeluarkan kepulan asap pekat dari salah satu komputer di laboratorium PPLG, langkah K3 pertama yang paling tepat dilakukan adalah:",
+    options: [
+      "Menyiram komputer yang berasap dengan seember air",
+      "Segera menekan tombol saklar darurat pemutus arus listrik lab (Emergency Power Off / MCB Lab)",
+      "Mencoba mencabut kabel colokan komputer tersebut dengan tangan basah",
+      "Membiarkan komputer tetap menyala sambil menyelesaikan commit kode sumber"
+    ],
+    answer: 1,
+    topic: "Tanggap Darurat Lab Komputer",
+    explanation: "Langkah pertama yang paling krusial saat kebakaran listrik adalah memutus sumber arus utama melalui saklar darurat (Emergency Power Off / MCB Lab). Mematikan aliran listrik menghentikan sumber panas dan mencegah risiko sengatan listrik sebelum pemadaman dengan APAR CO2 dilakukan."
   }
 ];
 
@@ -195,6 +256,25 @@ let currentQ = 0;
 let userAnswers = new Array(quizData.length).fill(null);
 let timeLeft = 20 * 60; // 20 minutes
 let timerInterval;
+
+// Check URL params for quiz customization
+const urlParams = new URLSearchParams(window.location.search);
+const materiParam = urlParams.get('materi');
+if (materiParam) {
+  const materiTitles = {
+    'ergonomi': 'Kuis Ergonomi Kerja Programmer',
+    'mata': 'Kuis Kesehatan Mata & CVS 20-20-20',
+    'listrik': 'Kuis Keselamatan Listrik Lab Komputer',
+    'apar': 'Kuis Proteksi Kebakaran & APAR CO2',
+    'mental': 'Kuis Kesehatan Mental & Anti-Burnout',
+    'sop': 'Kuis SOP & Budaya 5R Lab PPLG',
+    'hardware': 'Kuis Perakitan PC & Proteksi ESD',
+    'lingkungan': 'Kuis Ergonomi Lingkungan & Pencahayaan'
+  };
+  if (materiTitles[materiParam]) {
+    document.getElementById('quizTitle').textContent = '📝 ' + materiTitles[materiParam];
+  }
+}
 
 // Build nav grid
 function buildNavGrid() {
@@ -218,7 +298,7 @@ function updateNavDot(idx) {
 
 function renderQuestion() {
   const q = quizData[currentQ];
-  document.getElementById('questionBadge').textContent = 'Soal ' + (currentQ + 1) + ' dari ' + quizData.length;
+  document.getElementById('questionBadge').textContent = 'Soal ' + (currentQ + 1) + ' dari ' + quizData.length + ' • ' + (q.topic || 'K3 PPLG');
   document.getElementById('questionText').textContent = q.q;
 
   const opts = document.getElementById('answerOptions');
@@ -245,7 +325,6 @@ function selectAnswer(idx) {
   // Update display
   document.querySelectorAll('.answer-option').forEach((opt, i) => {
     opt.className = 'answer-option' + (i === idx ? ' selected' : '');
-    opt.querySelector('.answer-letter').className = 'answer-letter' + (i === idx ? '' : '');
   });
   // Update nav dot
   const dot = document.getElementById('dot-' + currentQ);
@@ -311,11 +390,14 @@ function submitQuiz() {
   let correct = 0;
   quizData.forEach((q, i) => { if(userAnswers[i] === q.answer) correct++; });
   const score = Math.round((correct / quizData.length) * 100);
+  
+  const materiName = 'K3 PPLG';
   // Save to localStorage
   const hist = JSON.parse(localStorage.getItem('k3_history') || '[]');
-  hist.unshift({ materi: 'APD', score, correct, total: quizData.length, date: new Date().toISOString(), answers: userAnswers });
+  hist.unshift({ materi: materiName, score, correct, total: quizData.length, date: new Date().toISOString(), answers: userAnswers });
   localStorage.setItem('k3_history', JSON.stringify(hist.slice(0, 20)));
-  localStorage.setItem('k3_last_quiz', JSON.stringify({ materi: 'APD', score, correct, total: quizData.length, questions: quizData, answers: userAnswers }));
+  localStorage.setItem('k3_last_quiz', JSON.stringify({ materi: materiName, score, correct, total: quizData.length, questions: quizData, answers: userAnswers }));
+  
   // Redirect to result
   window.location.href = 'hasil.html';
 }

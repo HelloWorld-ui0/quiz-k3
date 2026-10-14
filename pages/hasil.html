@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hasil Kuis K3 - K3Learn</title>
-  <meta name="description" content="Lihat hasil kuis K3 Anda, pembahasan soal, riwayat nilai, dan rekomendasi materi untuk dipelajari kembali.">
+  <title>Hasil Kuis K3 PPLG - K3Learn</title>
+  <meta name="description" content="Lihat hasil kuis K3 PPLG Anda, pembahasan soal lengkap, riwayat skor, dan rekomendasi topik pembelajaran K3 untuk programmer.">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 </head>
 <body>
 
@@ -13,18 +14,18 @@
 <nav class="navbar" id="navbar">
   <div class="container">
     <a href="../index.html" class="nav-logo">
-      <div class="nav-logo-icon">⛑️</div>
-      <span class="nav-logo-text">K3<span>Learn</span></span>
+      <div class="nav-logo-icon">💻</div>
+      <span class="nav-logo-text">K3<span>PPLG</span></span>
     </a>
     <div class="nav-links" id="navLinks">
       <a href="../index.html" class="nav-link">Beranda</a>
-      <a href="kursus.html" class="nav-link">Kursus K3</a>
+      <a href="kursus.html" class="nav-link">Kursus K3 PPLG</a>
       <a href="kuis.html" class="nav-link">Kuis</a>
       <a href="hasil.html" class="nav-link active">Hasil Saya</a>
     </div>
     <div style="display:flex;align-items:center;gap:.75rem">
       <a href="kuis.html" class="btn btn-primary">📝 Kuis Baru</a>
-      <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
@@ -51,7 +52,7 @@
         <span id="statusText">Memuat hasil...</span>
       </div>
 
-      <h2 style="color:#fff;margin-bottom:.5rem;font-family:var(--font-display)" id="quizTitle">Kuis K3</h2>
+      <h2 style="color:#fff;margin-bottom:.5rem;font-family:var(--font-display)" id="quizTitle">Kuis K3 PPLG</h2>
       <p style="color:rgba(255,255,255,0.65);margin-bottom:2rem;font-size:.9375rem" id="quizDate">–</p>
 
       <div class="result-stats-grid">
@@ -71,7 +72,7 @@
 
       <div class="result-actions">
         <a href="kuis.html" class="btn btn-outline btn-lg">🔄 Ulangi Kuis</a>
-        <a href="materi.html" class="btn btn-primary btn-lg">📚 Pelajari Materi</a>
+        <a href="materi.html" class="btn btn-primary btn-lg">📚 Pelajari Materi K3</a>
         <a href="../index.html" class="btn btn-navy btn-lg">🏠 Beranda</a>
       </div>
     </div>
@@ -84,7 +85,7 @@
     <div class="card mb-6" id="rekomendasiCard" style="display:none;margin-bottom:1.5rem">
       <div class="card-header" style="background:linear-gradient(135deg,#FFF5EE,#fff)">
         <div style="font-family:var(--font-display);font-weight:700;color:#C4430A;display:flex;align-items:center;gap:.5rem">
-          💡 Rekomendasi Materi untuk Dipelajari Kembali
+          💡 Rekomendasi Topik K3 PPLG untuk Dipelajari Kembali
         </div>
       </div>
       <div class="card-body" id="rekomendasiBody"></div>
@@ -93,8 +94,8 @@
     <!-- PEMBAHASAN -->
     <div style="margin-bottom:1.5rem">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem">
-        <h3 style="font-family:var(--font-display);font-weight:800;color:#111827">📖 Pembahasan Setiap Soal</h3>
-        <button class="btn btn-outline-navy btn-sm" onclick="toggleAllReview()">Buka/Tutup Semua</button>
+        <h3 style="font-family:var(--font-display);font-weight:800;color:#111827">📖 Pembahasan Setiap Soal K3 PPLG</h3>
+        <button class="btn btn-outline-navy btn-sm" onclick="toggleAllReview()">Buka/Tutup Pembahasan</button>
       </div>
       <div id="reviewContainer"></div>
     </div>
@@ -102,12 +103,12 @@
     <!-- RIWAYAT NILAI -->
     <div class="card">
       <div class="card-header">
-        <div style="font-family:var(--font-display);font-weight:700;color:#152B5E">📊 Riwayat Nilai Kuis</div>
+        <div style="font-family:var(--font-display);font-weight:700;color:#152B5E">📊 Riwayat Percobaan Kuis</div>
       </div>
       <div class="card-body" id="historyContainer">
         <div style="text-align:center;padding:2rem;color:#9CA3AF">
           <div style="font-size:2rem;margin-bottom:.75rem">📭</div>
-          <div>Belum ada riwayat kuis</div>
+          <div>Belum ada riwayat kuis tersimpan</div>
         </div>
       </div>
     </div>
@@ -116,7 +117,7 @@
     <div style="text-align:center;padding:2.5rem 0">
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
         <a href="kuis.html" class="btn btn-primary btn-lg">🔄 Ulangi Kuis</a>
-        <a href="kursus.html" class="btn btn-navy btn-lg">📚 Kembali Belajar</a>
+        <a href="kursus.html" class="btn btn-navy btn-lg">📚 Jelajahi Modul Lain</a>
         <a href="../index.html" class="btn btn-outline-navy btn-lg">🏠 Beranda</a>
       </div>
     </div>
@@ -146,7 +147,7 @@ function renderScore(data) {
   const score = data.score;
   const isPass = score >= 80;
 
-  // Score circle
+  // Score circle animation
   const circumference = 515.22;
   const offset = circumference - (score / 100) * circumference;
   const circle = document.getElementById('scoreCircle');
@@ -159,7 +160,7 @@ function renderScore(data) {
   // Animate number
   let n = 0;
   const numEl = document.getElementById('scoreNumber');
-  const step = score / 60;
+  const step = Math.max(score / 60, 1);
   const interval = setInterval(() => {
     n = Math.min(n + step, score);
     numEl.textContent = Math.floor(n);
@@ -170,15 +171,15 @@ function renderScore(data) {
   const statusEl = document.getElementById('resultStatus');
   statusEl.className = 'result-status ' + (isPass ? 'pass' : 'fail');
   document.getElementById('statusIcon').textContent = isPass ? '🏆' : '📚';
-  document.getElementById('statusText').textContent = isPass ? 'LULUS' : 'BELUM LULUS';
+  document.getElementById('statusText').textContent = isPass ? 'LULUS (KOMPETEN)' : 'BELUM LULUS (PERLU REMEDIAL)';
 
-  document.getElementById('quizTitle').textContent = 'Kuis ' + (data.materi || 'K3');
-  document.getElementById('quizDate').textContent = formatDate(history[0]?.date);
+  document.getElementById('quizTitle').textContent = 'Kuis ' + (data.materi || 'K3 PPLG');
+  document.getElementById('quizDate').textContent = formatDate(history[0]?.date || new Date().toISOString());
   document.getElementById('correctCount').textContent = data.correct;
   document.getElementById('wrongCount').textContent = data.total - data.correct;
   document.getElementById('totalCount').textContent = data.total;
 
-  // Rekomendasi
+  // Rekomendasi Pintar berdasarkan soal yang salah
   if(!isPass && data.questions) {
     const wrongIdxs = [];
     data.questions.forEach((q, i) => {
@@ -187,20 +188,24 @@ function renderScore(data) {
     if(wrongIdxs.length > 0) {
       document.getElementById('rekomendasiCard').style.display = 'block';
       document.getElementById('rekomendasiBody').innerHTML = `
-        <p style="color:#374151;margin-bottom:1rem">Nilai Anda <strong>${score}</strong>, belum mencapai nilai lulus minimal <strong>80</strong>. Pelajari kembali topik berikut:</p>
-        <div style="display:flex;flex-direction:column;gap:.5rem">
-          ${wrongIdxs.map(i => `
+        <p style="color:#374151;margin-bottom:1rem">Nilai Anda <strong>${score}</strong>, belum mencapai batas kelulusan <strong>80</strong>. Berikut adalah materi K3 PPLG yang disarankan untuk dipelajari kembali:</p>
+        <div style="display:flex;flex-direction:column;gap:.625rem">
+          ${wrongIdxs.map(i => {
+            const q = data.questions[i];
+            const topic = q.topic || 'K3 Rekayasa Perangkat Lunak';
+            return `
             <div style="display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:#FFF5EE;border:1px solid #FEE4CF;border-radius:.75rem">
-              <span style="font-size:1.125rem">📖</span>
-              <div>
-                <div style="font-weight:600;font-size:.9rem;color:#92400E">Soal ${i+1}: Topik Terkait</div>
-                <div style="font-size:.8125rem;color:#C4430A">Pelajari kembali materi APD Bab ${i+1}</div>
+              <span style="font-size:1.25rem">📖</span>
+              <div style="flex:1">
+                <div style="font-weight:700;font-size:.9rem;color:#92400E">Soal ${i+1}: ${topic}</div>
+                <div style="font-size:.8125rem;color:#C4430A">Pertanyaan: "${q.q.substring(0, 75)}..."</div>
               </div>
             </div>
-          `).join('')}
+          `;}).join('')}
         </div>
-        <div style="margin-top:1.25rem">
-          <a href="materi.html?id=apd" class="btn btn-primary btn-sm">📚 Pelajari Kembali Materi APD</a>
+        <div style="margin-top:1.25rem;display:flex;gap:.75rem;flex-wrap:wrap">
+          <a href="materi.html" class="btn btn-primary btn-sm">📚 Buka Panduan Materi K3 PPLG</a>
+          <a href="kuis.html" class="btn btn-outline-navy btn-sm">🔄 Coba Kuis Lagi</a>
         </div>
       `;
     }
@@ -221,8 +226,11 @@ function renderReview(data) {
       <div class="review-card ${correct ? 'review-correct' : 'review-wrong'}" id="review-${i}">
         <div class="review-card-header">
           <div class="review-icon ${correct ? 'correct' : 'wrong'}">${correct ? '✅' : '❌'}</div>
-          <div>
-            <div style="font-size:.75rem;color:#9CA3AF;margin-bottom:.25rem;font-weight:600">SOAL ${i+1}</div>
+          <div style="flex:1">
+            <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.25rem">
+              <span style="font-size:.75rem;color:#9CA3AF;font-weight:700">SOAL ${i+1}</span>
+              <span class="badge ${correct ? 'badge-green' : 'badge-red'}" style="font-size:.7rem;padding:.15rem .5rem">${q.topic || 'K3 PPLG'}</span>
+            </div>
             <div class="review-question">${q.q}</div>
           </div>
         </div>
@@ -237,7 +245,7 @@ function renderReview(data) {
           </div>` : ''}
         </div>
         <div class="review-explanation">
-          <strong>💡 Pembahasan:</strong> ${q.explanation}
+          <strong>💡 Pembahasan Soal:</strong> ${q.explanation}
         </div>
       </div>
     `;
@@ -248,12 +256,12 @@ function renderReview(data) {
 function renderHistory() {
   const container = document.getElementById('historyContainer');
   if(!history.length) return;
-  let html = '<table class="history-table"><thead><tr><th>#</th><th>Materi</th><th>Nilai</th><th>Benar/Total</th><th>Status</th><th>Tanggal</th></tr></thead><tbody>';
+  let html = '<table class="history-table"><thead><tr><th>#</th><th>Modul Kuis</th><th>Skor</th><th>Benar/Total</th><th>Status</th><th>Tanggal</th></tr></thead><tbody>';
   history.forEach((h, i) => {
     const pass = h.score >= 80;
     html += `<tr>
       <td style="color:#9CA3AF;font-size:.875rem">${i+1}</td>
-      <td style="font-weight:600">${h.materi || 'K3'}</td>
+      <td style="font-weight:600">${h.materi || 'K3 PPLG'}</td>
       <td><span style="font-family:var(--font-display);font-weight:800;font-size:1.125rem;color:${pass ? '#16A34A' : '#E85010'}">${h.score}</span></td>
       <td style="color:#4B5563">${h.correct} / ${h.total}</td>
       <td><span class="badge ${pass ? 'badge-green' : 'badge-red'}">${pass ? '✅ LULUS' : '❌ BELUM'}</span></td>
@@ -266,7 +274,6 @@ function renderHistory() {
 
 let allOpen = true;
 function toggleAllReview() {
-  // Simple toggle visibility of explanations
   document.querySelectorAll('.review-explanation').forEach(el => {
     el.style.display = allOpen ? 'none' : 'block';
   });
@@ -275,28 +282,35 @@ function toggleAllReview() {
 
 // INIT
 document.addEventListener('DOMContentLoaded', () => {
+  // Purge any outdated non-PPLG quiz cache
+  if(lastQuiz && lastQuiz.materi && !lastQuiz.materi.includes('PPLG')) {
+    localStorage.removeItem('k3_last_quiz');
+    location.reload();
+    return;
+  }
+  
   if(lastQuiz) {
     renderScore(lastQuiz);
   } else {
-    // Demo data for display
+    // Default demo data for fresh visits
     const demoData = {
-      materi: 'APD (Demo)',
-      score: 80,
-      correct: 8,
+      materi: 'K3 PPLG (Demo)',
+      score: 90,
+      correct: 9,
       total: 10,
       questions: [
-        { q: "Apa singkatan APD?", options: ["Alat Pengaman Daerah", "Alat Pelindung Diri", "Alat Penanda Daerah", "Alat Pengamanan Darurat"], answer: 1, explanation: "APD adalah Alat Pelindung Diri (Personal Protective Equipment)." },
-        { q: "Dalam hierarki risiko, APD berada di urutan:", options: ["Pertama", "Kedua", "Ketiga", "Terakhir"], answer: 3, explanation: "APD berada di urutan terakhir (kelima) dalam hierarki pengendalian risiko." },
-        { q: "Helm kelas E tahan hingga berapa volt?", options: ["1.000", "5.000", "20.000", "50.000"], answer: 2, explanation: "Helm kelas E (Electrical) tahan hingga 20.000 volt." },
-        { q: "Helm yang kena benturan keras harus:", options: ["Tetap dipakai", "Dibersihkan saja", "Segera diganti", "Dicat ulang"], answer: 2, explanation: "Helm bekas benturan keras harus langsung diganti." },
-        { q: "Sarung tangan untuk bahan kimia korosif:", options: ["Kulit", "Nitrile/karet", "Kain tebal", "Anti-potong"], answer: 1, explanation: "Sarung tangan nitrile/karet tahan terhadap bahan kimia korosif." },
-        { q: "Regulasi APD di Indonesia:", options: ["UU 13/2003", "Permenaker 08/2010", "PP 50/2012", "Kepmenaker 187/1999"], answer: 1, explanation: "Permenakertrans No. 08/2010 mengatur APD." },
-        { q: "APD untuk area IDLH:", options: ["Masker kain", "N95", "SCBA", "Half-face"], answer: 2, explanation: "SCBA digunakan di area IDLH." },
-        { q: "Rompi safety berfungsi untuk:", options: ["Pelindung benda jatuh", "Meningkatkan visibilitas", "Pelindung api", "Penyerap benturan"], answer: 1, explanation: "Rompi safety meningkatkan visibilitas." },
-        { q: "Yang wajib sediakan APD gratis:", options: ["Pekerja", "Pemerintah", "Pengusaha", "Serikat"], answer: 2, explanation: "Pengusaha wajib menyediakan APD secara cuma-cuma." },
-        { q: "Sebelum pakai sarung tangan karet, periksa:", options: ["Warna", "Lubang/kerusakan", "Ukuran", "Tanggal kadaluarsa"], answer: 1, explanation: "Periksa ada tidaknya lubang sebelum digunakan." }
+        { q: "Jarak ideal mata ke layar monitor programmer:", options: ["10-20 cm", "25-35 cm", "50-70 cm", "100-150 cm"], answer: 2, topic: "Ergonomi Layar", explanation: "Jarak ideal 50-70 cm (sepanjang jangkauan satu lengan)." },
+        { q: "Maksud aturan istirahat mata 20-20-20:", options: ["Bekerja 20 jam", "Setiap 20 menit lihat objek 20 kaki (6m) selama 20 detik", "Kedip 20 kali", "Brightness 20%"], answer: 1, topic: "Aturan 20-20-20", explanation: "Setiap 20 menit menatap layar, istirahatkan mata dengan melihat objek sejauh 20 kaki (6m) selama 20 detik." },
+        { q: "Penyakit akibat mengetik dengan pergelangan menekuk lama:", options: ["Carpal Tunnel Syndrome (CTS)", "Vertigo Otot", "Astigmatisme Komputer", "Scoliosis"], answer: 0, topic: "Ergonomi & CTS", explanation: "Carpal Tunnel Syndrome (CTS) disebabkan penekanan saraf medianus pergelangan tangan." },
+        { q: "Jenis APAR wajib untuk kebakaran elektronik di lab komputer:", options: ["Air", "Busa (Foam)", "Gas CO2 atau Clean Agent", "Air sabun"], answer: 2, topic: "APAR CO2 Lab", explanation: "APAR CO2 non-konduktif dan tidak meninggalkan residu perusak sirkuit elektronik." },
+        { q: "Mengapa dilarang daisy-chaining stop kontak di lab:", options: ["Internet lambat", "Beban arus berlebih (overload) picu kebakaran", "Lisensi rusak", "Logout otomatis"], answer: 1, topic: "Kelistrikan Lab", explanation: "Daisy chaining dapat memicu kelebihan beban arus listrik dan panas kabel berlebih." },
+        { q: "Larangan cairan dekat komputer di lab PPLG bertujuan:", options: ["Cegah korsleting & sengatan listrik", "Ruang tetap santai", "Cegah hilang fokus", "Biar bersih saja"], answer: 0, topic: "SOP Lab PPLG", explanation: "Cairan memicu korsleting listrik langsung, merusak hardware, dan bahaya sengatan." },
+        { q: "Fungsi gelang antistatis saat perakitan PC lab:", options: ["Cegah goresan", "Alirkan muatan listrik statis tubuh ke ground (ESD)", "Clock lebih cepat", "Tahan beban casing"], answer: 1, topic: "Hardware & ESD", explanation: "Gelang antistatis menyalurkan muatan listrik statis tubuh agar tidak merusak chip IC & RAM." },
+        { q: "Sudut siku ideal saat mengetik keyboard:", options: ["30-45 derajat", "90-100 derajat sejajar meja", "180 derajat lurus", "Gantung bebas"], answer: 1, topic: "Ergonomi Duduk", explanation: "Sudut siku optimal 90-100 derajat agar bahu rileks dan sirkulasi darah lancar." },
+        { q: "Praktik K3 kognitif saat koding deadline tinggi:", options: ["Koding 10 jam nonstop", "Teknik Pomodoro (25/5) & hidrasi", "Tidak minum air", "Kecerahan 100% ruang gelap"], answer: 1, topic: "Mental Health & Pomodoro", explanation: "Metode Pomodoro 25 menit fokus dan 5 menit rehat mencegah kelelahan mental." },
+        { q: "Langkah pertama saat korsleting PC berasap:", options: ["Siram air", "Tekan Emergency Power Off / matikan MCB lab", "Cabut tangan basah", "Rekam video"], answer: 1, topic: "Tanggap Darurat", explanation: "Matikan pasokan arus utama segera untuk menghentikan panas dan bahaya listrik." }
       ],
-      answers: [1, 3, 2, 2, 1, 1, 2, 1, 2, 1]
+      answers: [2, 1, 0, 2, 1, 0, 1, 1, 1, 1]
     };
     renderScore(demoData);
   }

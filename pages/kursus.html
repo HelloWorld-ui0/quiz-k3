@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kursus K3 - K3Learn</title>
-  <meta name="description" content="Daftar lengkap kursus K3 meliputi APD, kebakaran, P3K, keselamatan mesin, bahan kimia, dan prosedur darurat.">
+  <title>Kursus K3 PPLG - K3Learn</title>
+  <meta name="description" content="Daftar lengkap kursus K3 untuk bidang Pengembangan Perangkat Lunak dan GIM (PPLG) - ergonomi pemrograman, kesehatan mata, kelistrikan lab, proteksi APAR CO2, dan budaya 5R.">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 </head>
 <body>
 
@@ -13,18 +14,18 @@
 <nav class="navbar" id="navbar">
   <div class="container">
     <a href="../index.html" class="nav-logo">
-      <div class="nav-logo-icon">⛑️</div>
-      <span class="nav-logo-text">K3<span>Learn</span></span>
+      <div class="nav-logo-icon">💻</div>
+      <span class="nav-logo-text">K3<span>PPLG</span></span>
     </a>
     <div class="nav-links" id="navLinks">
       <a href="../index.html" class="nav-link">Beranda</a>
-      <a href="kursus.html" class="nav-link active">Kursus K3</a>
+      <a href="kursus.html" class="nav-link active">Kursus K3 PPLG</a>
       <a href="kuis.html" class="nav-link">Kuis</a>
       <a href="hasil.html" class="nav-link">Hasil Saya</a>
     </div>
     <div style="display:flex;align-items:center;gap:.75rem">
       <a href="kuis.html" class="btn btn-primary">Kerjakan Kuis →</a>
-      <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
@@ -35,10 +36,10 @@
     <div class="breadcrumb">
       <a href="../index.html">🏠 Beranda</a>
       <span class="breadcrumb-sep">/</span>
-      <span class="breadcrumb-current">Kursus K3</span>
+      <span class="breadcrumb-current">Kursus K3 PPLG</span>
     </div>
-    <h1 class="page-header-title">📚 Daftar Kursus K3</h1>
-    <p class="page-header-subtitle">8 modul pembelajaran komprehensif sesuai standar keselamatan kerja nasional dan internasional</p>
+    <h1 class="page-header-title">📚 Modul Kursus K3 PPLG</h1>
+    <p class="page-header-subtitle">8 modul kurikulum Keselamatan dan Kesehatan Kerja terpadu untuk siswa & profesional Pengembangan Perangkat Lunak dan GIM</p>
   </div>
 </header>
 
@@ -48,283 +49,291 @@
 
     <!-- FILTER -->
     <div class="filter-bar">
-      <button class="filter-tab active" onclick="filterCourse('semua',this)">Semua (8)</button>
-      <button class="filter-tab" onclick="filterCourse('dasar',this)">🏛️ Dasar</button>
-      <button class="filter-tab" onclick="filterCourse('apd',this)">🦺 APD</button>
-      <button class="filter-tab" onclick="filterCourse('bahaya',this)">⚠️ Bahaya</button>
-      <button class="filter-tab" onclick="filterCourse('kebakaran',this)">🔥 Kebakaran</button>
-      <button class="filter-tab" onclick="filterCourse('p3k',this)">🏥 P3K</button>
-      <button class="filter-tab" onclick="filterCourse('mesin',this)">⚙️ Mesin</button>
-      <button class="filter-tab" onclick="filterCourse('kimia',this)">🧪 Kimia</button>
-      <button class="filter-tab" onclick="filterCourse('darurat',this)">🚨 Darurat</button>
+      <button class="filter-tab active" onclick="filterCourse('semua',this)">Semua Modul (8)</button>
+      <button class="filter-tab" onclick="filterCourse('ergonomi',this)">🪑 Ergonomi</button>
+      <button class="filter-tab" onclick="filterCourse('mata',this)">👁️ Kesehatan Mata</button>
+      <button class="filter-tab" onclick="filterCourse('listrik',this)">⚡ Listrik Lab</button>
+      <button class="filter-tab" onclick="filterCourse('apar',this)">🧯 APAR & Kebakaran</button>
+      <button class="filter-tab" onclick="filterCourse('mental',this)">🧠 Mental & Burnout</button>
+      <button class="filter-tab" onclick="filterCourse('sop',this)">📋 SOP & 5R Lab</button>
+      <button class="filter-tab" onclick="filterCourse('hardware',this)">🛠️ Hardware & ESD</button>
     </div>
 
     <!-- COURSES GRID -->
     <div class="courses-grid" id="coursesGrid">
 
       <!-- Course 1 -->
-      <div class="course-card" data-kategori="dasar" data-aos data-delay="50">
+      <div class="course-card" data-kategori="ergonomi" data-aos data-delay="50">
         <div class="course-img-wrap">
-          <img src="../assets/images/course_k3basics.jpg" alt="Dasar K3" loading="lazy">
-          <div class="course-img-badge"><span class="badge badge-navy">🏛️ Dasar</span></div>
+          <img src="../assets/images/course_ergonomi.jpg" alt="Ergonomi Kerja Programmer" loading="lazy">
+          <div class="course-img-badge"><span class="badge badge-navy">🪑 Ergonomi</span></div>
         </div>
         <div class="course-body">
-          <div class="course-title">Pengenalan Dasar-Dasar K3</div>
-          <p class="course-desc">Memahami konsep, tujuan, dan ruang lingkup K3. Pelajari regulasi dasar, hak dan kewajiban pekerja, serta prinsip-prinsip keselamatan kerja.</p>
+          <div class="course-title">Ergonomi Kerja Programmer & Sikap Duduk</div>
+          <p class="course-desc">Panduan postur tubuh ideal di depan komputer, sudut 90-100 derajat lengan & lutut, penyesuaian kursi ergonomis, serta pencegahan Carpal Tunnel Syndrome & Low Back Pain.</p>
           <div class="course-meta">
             <div class="course-meta-item">⏱️ 45 menit</div>
             <div class="course-meta-item">📄 6 topik</div>
+            <div class="course-meta-item">📝 Kuis Tersedia</div>
           </div>
           <div style="margin-bottom:1rem">
             <div style="font-size:.8125rem;font-weight:600;color:#374151;margin-bottom:.5rem">Sub-materi:</div>
             <div style="display:flex;flex-direction:column;gap:.375rem">
-              <div style="font-size:.8125rem;color:#6B7280;display:flex;align-items:center;gap:.5rem">✓ Pengertian dan Tujuan K3</div>
-              <div style="font-size:.8125rem;color:#6B7280;display:flex;align-items:center;gap:.5rem">✓ Regulasi dan Perundangan K3</div>
-              <div style="font-size:.8125rem;color:#6B7280;display:flex;align-items:center;gap:.5rem">✓ Hak dan Kewajiban Pekerja</div>
-              <div style="font-size:.8125rem;color:#9CA3AF;display:flex;align-items:center;gap:.5rem">+ 3 topik lainnya</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Pengaturan Ketinggian Meja & Kursi Ergonomis</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Posisi Netral Pergelangan Tangan & Keyboard</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Pencegahan Carpal Tunnel Syndrome (CTS)</div>
+              <div style="font-size:.8125rem;color:#9CA3AF">+ 3 topik lainnya</div>
             </div>
           </div>
           <div>
-            <div class="course-progress-hdr"><span>Progres</span><span style="color:#16A34A;font-weight:700">65%</span></div>
+            <div class="course-progress-hdr"><span>Progres Belajar</span><span style="color:#16A34A;font-weight:700">65%</span></div>
             <div class="progress-wrap"><div class="progress-bar" style="width:65%"></div></div>
           </div>
         </div>
         <div class="card-footer" style="padding:1rem 1.25rem;display:flex;gap:.75rem">
-          <a href="materi.html?id=k3dasar" class="btn btn-navy btn-sm" style="flex:1">📖 Lanjutkan</a>
-          <a href="kuis.html?materi=k3dasar" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Kuis</a>
+          <a href="materi.html?id=ergonomi" class="btn btn-navy btn-sm" style="flex:1">📖 Pelajari Modul</a>
+          <a href="kuis.html?materi=ergonomi" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Uji Kuis</a>
         </div>
       </div>
 
       <!-- Course 2 -->
-      <div class="course-card" data-kategori="apd" data-aos data-delay="100">
+      <div class="course-card" data-kategori="mata" data-aos data-delay="100">
         <div class="course-img-wrap">
-          <img src="../assets/images/course_apd.jpg" alt="APD" loading="lazy">
-          <div class="course-img-badge"><span class="badge badge-orange">🦺 APD</span></div>
+          <img src="../assets/images/course_hazard.jpg" alt="Kesehatan Penglihatan" loading="lazy">
+          <div class="course-img-badge"><span class="badge badge-orange">👁️ Kesehatan Mata</span></div>
         </div>
         <div class="course-body">
-          <div class="course-title">Alat Pelindung Diri (APD)</div>
-          <p class="course-desc">Pelajari jenis-jenis APD lengkap — helm, kacamata, sarung tangan, rompi, masker — cara pemakaian yang benar dan pemeliharaannya.</p>
+          <div class="course-title">Kesehatan Mata & Aturan 20-20-20</div>
+          <p class="course-desc">Mencegah Computer Vision Syndrome (CVS), kelelahan visual akibat paparan layar monitor lama, pengaturan kontras monitor, dan teknik relaksasi mata 20-20-20.</p>
           <div class="course-meta">
-            <div class="course-meta-item">⏱️ 40 menit</div>
+            <div class="course-meta-item">⏱️ 35 menit</div>
             <div class="course-meta-item">📄 5 topik</div>
+            <div class="course-meta-item">📝 Kuis Tersedia</div>
           </div>
           <div style="margin-bottom:1rem">
             <div style="font-size:.8125rem;font-weight:600;color:#374151;margin-bottom:.5rem">Sub-materi:</div>
             <div style="display:flex;flex-direction:column;gap:.375rem">
-              <div style="font-size:.8125rem;color:#6B7280">✓ Jenis-Jenis APD dan Fungsinya</div>
-              <div style="font-size:.8125rem;color:#6B7280">✓ Cara Pemakaian yang Benar</div>
-              <div style="font-size:.8125rem;color:#6B7280">✓ Perawatan dan Penyimpanan APD</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Gejala & Risiko Computer Vision Syndrome (CVS)</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Penerapan Metode 20-20-20 Saat Coding</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Jarak Pandang 50-70 cm & Sudut 15-20° Layar</div>
               <div style="font-size:.8125rem;color:#9CA3AF">+ 2 topik lainnya</div>
             </div>
           </div>
           <div>
-            <div class="course-progress-hdr"><span>Progres</span><span style="color:#E85010;font-weight:700">30%</span></div>
-            <div class="progress-wrap"><div class="progress-bar progress-bar-orange" style="width:30%"></div></div>
+            <div class="course-progress-hdr"><span>Progres Belajar</span><span style="color:#E85010;font-weight:700">40%</span></div>
+            <div class="progress-wrap"><div class="progress-bar progress-bar-orange" style="width:40%"></div></div>
           </div>
         </div>
         <div class="card-footer" style="padding:1rem 1.25rem;display:flex;gap:.75rem">
-          <a href="materi.html?id=apd" class="btn btn-primary btn-sm" style="flex:1">🎓 Mulai</a>
-          <a href="kuis.html?materi=apd" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Kuis</a>
+          <a href="materi.html?id=mata" class="btn btn-primary btn-sm" style="flex:1">🎓 Pelajari Modul</a>
+          <a href="kuis.html?materi=mata" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Uji Kuis</a>
         </div>
       </div>
 
       <!-- Course 3 -->
-      <div class="course-card" data-kategori="bahaya" data-aos data-delay="150">
+      <div class="course-card" data-kategori="listrik" data-aos data-delay="150">
         <div class="course-img-wrap">
-          <img src="../assets/images/course_hazard.jpg" alt="Identifikasi Bahaya" loading="lazy">
-          <div class="course-img-badge"><span class="badge badge-yellow" style="background:#FEF9C3;color:#92400E">⚠️ Bahaya</span></div>
+          <img src="../assets/images/course_machine.jpg" alt="Keselamatan Listrik Lab" loading="lazy">
+          <div class="course-img-badge"><span class="badge" style="background:#EFF6FF;color:#1E40AF">⚡ Listrik Lab</span></div>
         </div>
         <div class="course-body">
-          <div class="course-title">Identifikasi Bahaya dan Penilaian Risiko</div>
-          <p class="course-desc">Teknik HIRA (Hazard Identification Risk Assessment), JSA, dan cara membuat tabel penilaian risiko di lingkungan kerja Anda.</p>
+          <div class="course-title">Keselamatan Kelistrikan di Lab Komputer</div>
+          <p class="course-desc">Pencegahan bahaya beban lebih (overload) colokan listrik, bahaya daisy-chaining stop kontak, pentingnya grounding aman, serta manajemen kabel rapi (cable management).</p>
           <div class="course-meta">
             <div class="course-meta-item">⏱️ 50 menit</div>
             <div class="course-meta-item">📄 6 topik</div>
+            <div class="course-meta-item">📝 Kuis Tersedia</div>
           </div>
           <div style="margin-bottom:1rem">
             <div style="font-size:.8125rem;font-weight:600;color:#374151;margin-bottom:.5rem">Sub-materi:</div>
             <div style="display:flex;flex-direction:column;gap:.375rem">
-              <div style="font-size:.8125rem;color:#6B7280">✓ Pengertian Bahaya dan Risiko</div>
-              <div style="font-size:.8125rem;color:#6B7280">✓ Metode HIRA dan JSA</div>
-              <div style="font-size:.8125rem;color:#6B7280">✓ Matriks Penilaian Risiko</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Bahaya Beban Berlebih & Tumpukan Colokan</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Grounding & Penggunaan UPS / Surge Protector</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Manajemen Kabel (Cable Duct & Trunking)</div>
               <div style="font-size:.8125rem;color:#9CA3AF">+ 3 topik lainnya</div>
             </div>
           </div>
           <div>
-            <div class="course-progress-hdr"><span>Progres</span><span style="color:#9CA3AF;font-weight:700">0%</span></div>
+            <div class="course-progress-hdr"><span>Progres Belajar</span><span style="color:#9CA3AF;font-weight:700">0%</span></div>
             <div class="progress-wrap"><div class="progress-bar" style="width:0%"></div></div>
           </div>
         </div>
         <div class="card-footer" style="padding:1rem 1.25rem;display:flex;gap:.75rem">
-          <a href="materi.html?id=bahaya" class="btn btn-navy btn-sm" style="flex:1">📖 Mulai</a>
-          <a href="kuis.html?materi=bahaya" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Kuis</a>
+          <a href="materi.html?id=listrik" class="btn btn-navy btn-sm" style="flex:1">📖 Mulai Belajar</a>
+          <a href="kuis.html?materi=listrik" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Uji Kuis</a>
         </div>
       </div>
 
       <!-- Course 4 -->
-      <div class="course-card" data-kategori="kebakaran" data-aos data-delay="200">
+      <div class="course-card" data-kategori="apar" data-aos data-delay="200">
         <div class="course-img-wrap">
-          <img src="../assets/images/course_fire.jpg" alt="Kebakaran" loading="lazy">
-          <div class="course-img-badge"><span class="badge badge-red">🔥 Kebakaran</span></div>
+          <img src="../assets/images/course_fire.jpg" alt="Proteksi Kebakaran Lab" loading="lazy">
+          <div class="course-img-badge"><span class="badge badge-red">🧯 APAR Lab</span></div>
         </div>
         <div class="course-body">
-          <div class="course-title">Pencegahan dan Penanganan Kebakaran</div>
-          <p class="course-desc">Klasifikasi api, cara menggunakan APAR dengan metode PASS, jalur evakuasi, dan koordinasi tim pemadam kebakaran.</p>
+          <div class="course-title">Proteksi Kebakaran Lab & APAR CO2</div>
+          <p class="course-desc">Penanganan kebakaran kelas C pada perangkat elektronik bertegangan, penggunaan APAR gas CO2 / Clean Agent metode PASS, dan larangan APAR air pada komputer aktif.</p>
           <div class="course-meta">
-            <div class="course-meta-item">⏱️ 35 menit</div>
+            <div class="course-meta-item">⏱️ 40 menit</div>
             <div class="course-meta-item">📄 5 topik</div>
+            <div class="course-meta-item">📝 Kuis Tersedia</div>
           </div>
           <div style="margin-bottom:1rem">
             <div style="font-size:.8125rem;font-weight:600;color:#374151;margin-bottom:.5rem">Sub-materi:</div>
             <div style="display:flex;flex-direction:column;gap:.375rem">
-              <div style="font-size:.8125rem;color:#6B7280">✓ Klasifikasi Kebakaran (A,B,C,D)</div>
-              <div style="font-size:.8125rem;color:#6B7280">✓ Penggunaan APAR (Metode PASS)</div>
-              <div style="font-size:.8125rem;color:#6B7280">✓ Evakuasi dan Titik Kumpul</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Klasifikasi Kebakaran Listrik Kelas C</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Pengoperasian APAR CO2 Metode PASS</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Pemutus Arus Darurat (Emergency Power Off)</div>
               <div style="font-size:.8125rem;color:#9CA3AF">+ 2 topik lainnya</div>
             </div>
           </div>
           <div>
-            <div class="course-progress-hdr"><span>Progres</span><span style="color:#9CA3AF;font-weight:700">0%</span></div>
+            <div class="course-progress-hdr"><span>Progres Belajar</span><span style="color:#9CA3AF;font-weight:700">0%</span></div>
             <div class="progress-wrap"><div class="progress-bar" style="width:0%"></div></div>
           </div>
         </div>
         <div class="card-footer" style="padding:1rem 1.25rem;display:flex;gap:.75rem">
-          <a href="materi.html?id=kebakaran" class="btn btn-navy btn-sm" style="flex:1">📖 Mulai</a>
-          <a href="kuis.html?materi=kebakaran" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Kuis</a>
+          <a href="materi.html?id=apar" class="btn btn-navy btn-sm" style="flex:1">📖 Mulai Belajar</a>
+          <a href="kuis.html?materi=apar" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Uji Kuis</a>
         </div>
       </div>
 
       <!-- Course 5 -->
-      <div class="course-card" data-kategori="p3k" data-aos data-delay="250">
+      <div class="course-card" data-kategori="mental" data-aos data-delay="250">
         <div class="course-img-wrap">
-          <img src="../assets/images/course_firstaid.jpg" alt="P3K" loading="lazy">
-          <div class="course-img-badge"><span class="badge badge-green">🏥 P3K</span></div>
+          <img src="../assets/images/course_k3basics.jpg" alt="Kesehatan Mental Programmer" loading="lazy">
+          <div class="course-img-badge"><span class="badge" style="background:#FEF9C3;color:#92400E">🧠 Mental Health</span></div>
         </div>
         <div class="course-body">
-          <div class="course-title">Pertolongan Pertama pada Kecelakaan (P3K)</div>
-          <p class="course-desc">Prosedur P3K: penilaian korban, penanganan luka, perdarahan, patah tulang, sengatan listrik, dan kedaruratan medis lainnya.</p>
+          <div class="course-title">Kesehatan Mental & Anti-Burnout Developer</div>
+          <p class="course-desc">Strategi mengelola stres coding, beban deadline game/software, penerapan teknik Pomodoro (25/5), peregangan tubuh berkala, serta menjaga pola tidur dan hidrasi yang seimbang.</p>
           <div class="course-meta">
-            <div class="course-meta-item">⏱️ 55 menit</div>
-            <div class="course-meta-item">📄 7 topik</div>
+            <div class="course-meta-item">⏱️ 40 menit</div>
+            <div class="course-meta-item">📄 5 topik</div>
+            <div class="course-meta-item">📝 Kuis Tersedia</div>
           </div>
           <div style="margin-bottom:1rem">
             <div style="font-size:.8125rem;font-weight:600;color:#374151;margin-bottom:.5rem">Sub-materi:</div>
             <div style="display:flex;flex-direction:column;gap:.375rem">
-              <div style="font-size:.8125rem;color:#6B7280">✓ Prinsip Dasar P3K</div>
-              <div style="font-size:.8125rem;color:#6B7280">✓ Penanganan Luka dan Perdarahan</div>
-              <div style="font-size:.8125rem;color:#6B7280">✓ RJP (Resusitasi Jantung Paru)</div>
-              <div style="font-size:.8125rem;color:#9CA3AF">+ 4 topik lainnya</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Identifikasi Burnout & Kelelahan Kognitif</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Manajemen Waktu dengan Teknik Pomodoro</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Panduan Peregangan Otot Leher, Pundak, & Lengan</div>
+              <div style="font-size:.8125rem;color:#9CA3AF">+ 2 topik lainnya</div>
             </div>
           </div>
           <div>
-            <div class="course-progress-hdr"><span>Progres</span><span style="color:#9CA3AF;font-weight:700">0%</span></div>
+            <div class="course-progress-hdr"><span>Progres Belajar</span><span style="color:#9CA3AF;font-weight:700">0%</span></div>
             <div class="progress-wrap"><div class="progress-bar" style="width:0%"></div></div>
           </div>
         </div>
         <div class="card-footer" style="padding:1rem 1.25rem;display:flex;gap:.75rem">
-          <a href="materi.html?id=p3k" class="btn btn-navy btn-sm" style="flex:1">📖 Mulai</a>
-          <a href="kuis.html?materi=p3k" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Kuis</a>
+          <a href="materi.html?id=mental" class="btn btn-navy btn-sm" style="flex:1">📖 Mulai Belajar</a>
+          <a href="kuis.html?materi=mental" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Uji Kuis</a>
         </div>
       </div>
 
       <!-- Course 6 -->
-      <div class="course-card" data-kategori="mesin" data-aos data-delay="300">
+      <div class="course-card" data-kategori="sop" data-aos data-delay="300">
         <div class="course-img-wrap">
-          <img src="../assets/images/course_machine.jpg" alt="Mesin" loading="lazy">
-          <div class="course-img-badge"><span class="badge badge-navy" style="background:#EFF6FF;color:#1E40AF">⚙️ Mesin</span></div>
+          <img src="../assets/images/course_emergency.jpg" alt="SOP Lab PPLG" loading="lazy">
+          <div class="course-img-badge"><span class="badge badge-green">📋 SOP Lab PPLG</span></div>
         </div>
         <div class="course-body">
-          <div class="course-title">Keselamatan Penggunaan Mesin</div>
-          <p class="course-desc">Prosedur LOTO (Lockout/Tagout), penjagaan mesin, pemeriksaan sebelum operasi, dan penanganan kecelakaan mesin.</p>
+          <div class="course-title">SOP & Tata Tertib Laboratorium PPLG (5R)</div>
+          <p class="course-desc">Standar Operasional Prosedur laboratorium software, larangan cairan/makanan dekat workstation, prosedur aman shut down komputer, serta implementasi budaya 5R.</p>
           <div class="course-meta">
             <div class="course-meta-item">⏱️ 45 menit</div>
-            <div class="course-meta-item">📄 5 topik</div>
-          </div>
-          <div style="margin-bottom:1rem">
-            <div style="font-size:.8125rem;font-weight:600;color:#374151;margin-bottom:.5rem">Sub-materi:</div>
-            <div style="display:flex;flex-direction:column;gap:.375rem">
-              <div style="font-size:.8125rem;color:#6B7280">✓ Bahaya Mesin dan Perlindungan</div>
-              <div style="font-size:.8125rem;color:#6B7280">✓ Prosedur LOTO</div>
-              <div style="font-size:.8125rem;color:#6B7280">✓ Inspeksi Mesin Sebelum Operasi</div>
-              <div style="font-size:.8125rem;color:#9CA3AF">+ 2 topik lainnya</div>
-            </div>
-          </div>
-          <div>
-            <div class="course-progress-hdr"><span>Progres</span><span style="color:#9CA3AF;font-weight:700">0%</span></div>
-            <div class="progress-wrap"><div class="progress-bar" style="width:0%"></div></div>
-          </div>
-        </div>
-        <div class="card-footer" style="padding:1rem 1.25rem;display:flex;gap:.75rem">
-          <a href="materi.html?id=mesin" class="btn btn-navy btn-sm" style="flex:1">📖 Mulai</a>
-          <a href="kuis.html?materi=mesin" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Kuis</a>
-        </div>
-      </div>
-
-      <!-- Course 7 -->
-      <div class="course-card" data-kategori="kimia" data-aos data-delay="350">
-        <div class="course-img-wrap">
-          <img src="../assets/images/course_chemical.jpg" alt="Kimia" loading="lazy">
-          <div class="course-img-badge"><span class="badge" style="background:#F5F3FF;color:#6D28D9">🧪 Kimia</span></div>
-        </div>
-        <div class="course-body">
-          <div class="course-title">Penanganan Bahan Kimia Berbahaya</div>
-          <p class="course-desc">Membaca label GHS, menggunakan MSDS/SDS, prosedur penyimpanan B3, penanganan tumpahan, dan keselamatan laboratorium.</p>
-          <div class="course-meta">
-            <div class="course-meta-item">⏱️ 60 menit</div>
             <div class="course-meta-item">📄 6 topik</div>
+            <div class="course-meta-item">📝 Kuis Tersedia</div>
           </div>
           <div style="margin-bottom:1rem">
             <div style="font-size:.8125rem;font-weight:600;color:#374151;margin-bottom:.5rem">Sub-materi:</div>
             <div style="display:flex;flex-direction:column;gap:.375rem">
-              <div style="font-size:.8125rem;color:#6B7280">✓ Klasifikasi Bahan Kimia B3</div>
-              <div style="font-size:.8125rem;color:#6B7280">✓ Label GHS dan Simbol Bahaya</div>
-              <div style="font-size:.8125rem;color:#6B7280">✓ MSDS/SDS - Lembar Data Keselamatan</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Larangan Minuman & Makanan Dekat Komputer</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Prosedur Start-up & Shutdown PC Sesuai SOP</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Penerapan 5R: Ringkas, Rapi, Resik, Rawat, Rajin</div>
               <div style="font-size:.8125rem;color:#9CA3AF">+ 3 topik lainnya</div>
             </div>
           </div>
           <div>
-            <div class="course-progress-hdr"><span>Progres</span><span style="color:#9CA3AF;font-weight:700">0%</span></div>
+            <div class="course-progress-hdr"><span>Progres Belajar</span><span style="color:#9CA3AF;font-weight:700">0%</span></div>
             <div class="progress-wrap"><div class="progress-bar" style="width:0%"></div></div>
           </div>
         </div>
         <div class="card-footer" style="padding:1rem 1.25rem;display:flex;gap:.75rem">
-          <a href="materi.html?id=kimia" class="btn btn-navy btn-sm" style="flex:1">📖 Mulai</a>
-          <a href="kuis.html?materi=kimia" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Kuis</a>
+          <a href="materi.html?id=sop" class="btn btn-navy btn-sm" style="flex:1">📖 Mulai Belajar</a>
+          <a href="kuis.html?materi=sop" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Uji Kuis</a>
         </div>
       </div>
 
-      <!-- Course 8 -->
-      <div class="course-card" data-kategori="darurat" data-aos data-delay="400">
+      <!-- Course 7 -->
+      <div class="course-card" data-kategori="hardware" data-aos data-delay="350">
         <div class="course-img-wrap">
-          <img src="../assets/images/course_emergency.jpg" alt="Darurat" loading="lazy">
-          <div class="course-img-badge"><span class="badge" style="background:#F0FDFA;color:#0F766E">🚨 Darurat</span></div>
+          <img src="../assets/images/course_apd.jpg" alt="Hardware & ESD" loading="lazy">
+          <div class="course-img-badge"><span class="badge" style="background:#F5F3FF;color:#6D28D9">🛠️ Hardware & ESD</span></div>
         </div>
         <div class="course-body">
-          <div class="course-title">Prosedur Tanggap Darurat</div>
-          <p class="course-desc">Menyusun rencana tanggap darurat, melatih tim evakuasi, simulasi bencana, dan koordinasi dengan instansi terkait.</p>
+          <div class="course-title">Keselamatan Perakitan PC & Proteksi ESD</div>
+          <p class="course-desc">Prosedur aman perakitan & pembersihan PC lab, proteksi muatan listrik statis (ESD) dengan gelang antistatis, pemutusan sumber daya, dan penanganan tepi casing tajam.</p>
           <div class="course-meta">
-            <div class="course-meta-item">⏱️ 40 menit</div>
-            <div class="course-meta-item">📄 5 topik</div>
+            <div class="course-meta-item">⏱️ 55 menit</div>
+            <div class="course-meta-item">📄 6 topik</div>
+            <div class="course-meta-item">📝 Kuis Tersedia</div>
           </div>
           <div style="margin-bottom:1rem">
             <div style="font-size:.8125rem;font-weight:600;color:#374151;margin-bottom:.5rem">Sub-materi:</div>
             <div style="display:flex;flex-direction:column;gap:.375rem">
-              <div style="font-size:.8125rem;color:#6B7280">✓ Rencana Tanggap Darurat (RTD)</div>
-              <div style="font-size:.8125rem;color:#6B7280">✓ Jalur dan Prosedur Evakuasi</div>
-              <div style="font-size:.8125rem;color:#6B7280">✓ Peran Tim Tanggap Darurat</div>
-              <div style="font-size:.8125rem;color:#9CA3AF">+ 2 topik lainnya</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Bahaya Electrostatic Discharge (ESD) pada IC & RAM</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Penggunaan Gelang Antistatis & Mat Berisolasi</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Prosedur Isolasi Power Supply Sebelum Perakitan</div>
+              <div style="font-size:.8125rem;color:#9CA3AF">+ 3 topik lainnya</div>
             </div>
           </div>
           <div>
-            <div class="course-progress-hdr"><span>Progres</span><span style="color:#9CA3AF;font-weight:700">0%</span></div>
+            <div class="course-progress-hdr"><span>Progres Belajar</span><span style="color:#9CA3AF;font-weight:700">0%</span></div>
             <div class="progress-wrap"><div class="progress-bar" style="width:0%"></div></div>
           </div>
         </div>
         <div class="card-footer" style="padding:1rem 1.25rem;display:flex;gap:.75rem">
-          <a href="materi.html?id=darurat" class="btn btn-navy btn-sm" style="flex:1">📖 Mulai</a>
-          <a href="kuis.html?materi=darurat" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Kuis</a>
+          <a href="materi.html?id=hardware" class="btn btn-navy btn-sm" style="flex:1">📖 Mulai Belajar</a>
+          <a href="kuis.html?materi=hardware" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Uji Kuis</a>
         </div>
       </div>
+
+      <!-- Course 8 -->
+      <div class="course-card" data-kategori="ergonomi" data-aos data-delay="400">
+        <div class="course-img-wrap">
+          <img src="../assets/images/hero_pplg.jpg" alt="Lingkungan Fisik Lab" loading="lazy">
+          <div class="course-img-badge"><span class="badge" style="background:#F0FDFA;color:#0F766E">💡 Lingkungan Lab</span></div>
+        </div>
+        <div class="course-body">
+          <div class="course-title">Ergonomi Lingkungan & Pencahayaan Lab</div>
+          <p class="course-desc">Standar suhu ruangan komputer ideal (20-24°C), intensitas pencahayaan optimal (300-500 lux) tanpa pantulan silau pada layar, kontrol sirkulasi udara, dan tata ruang aman.</p>
+          <div class="course-meta">
+            <div class="course-meta-item">⏱️ 35 menit</div>
+            <div class="course-meta-item">📄 5 topik</div>
+            <div class="course-meta-item">📝 Kuis Tersedia</div>
+          </div>
+          <div style="margin-bottom:1rem">
+            <div style="font-size:.8125rem;font-weight:600;color:#374151;margin-bottom:.5rem">Sub-materi:</div>
+            <div style="display:flex;flex-direction:column;gap:.375rem">
+              <div style="font-size:.8125rem;color:#6B7280">✓ Tingkat Pencahayaan Ideal (300-500 Lux)</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Suhu AC Lab 20-24°C & Kelembapan Optimal</div>
+              <div style="font-size:.8125rem;color:#6B7280">✓ Tata Letak Meja Anti-Silau & Jalur Evakuasi Bebas</div>
+              <div style="font-size:.8125rem;color:#9CA3AF">+ 2 topik lainnya</div>
+            </div>
+          </div>
+          <div>
+            <div class="course-progress-hdr"><span>Progres Belajar</span><span style="color:#9CA3AF;font-weight:700">0%</span></div>
+            <div class="progress-wrap"><div class="progress-bar" style="width:0%"></div></div>
+          </div>
+        </div>
+        <div class="card-footer" style="padding:1rem 1.25rem;display:flex;gap:.75rem">
+          <a href="materi.html?id=lingkungan" class="btn btn-navy btn-sm" style="flex:1">📖 Mulai Belajar</a>
+          <a href="kuis.html?materi=lingkungan" class="btn btn-outline-navy btn-sm" style="flex:1">📝 Uji Kuis</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </main>
@@ -335,40 +344,40 @@
     <div class="footer-grid">
       <div>
         <div class="nav-logo" style="margin-bottom:.5rem">
-          <div class="nav-logo-icon">⛑️</div>
-          <span class="nav-logo-text">K3<span>Learn</span></span>
+          <div class="nav-logo-icon">💻</div>
+          <span class="nav-logo-text">K3<span>PPLG</span></span>
         </div>
-        <p class="footer-brand-desc">Platform pembelajaran K3 online yang komprehensif untuk tenaga kerja Indonesia.</p>
+        <p class="footer-brand-desc">Platform pembelajaran Keselamatan dan Kesehatan Kerja khusus bidang Rekayasa Perangkat Lunak dan Pengembangan GIM.</p>
       </div>
       <div>
-        <div class="footer-heading">Kursus</div>
+        <div class="footer-heading">Modul Kursus</div>
         <div class="footer-links">
-          <a href="materi.html?id=k3dasar" class="footer-link">Dasar-Dasar K3</a>
-          <a href="materi.html?id=apd" class="footer-link">Alat Pelindung Diri</a>
-          <a href="materi.html?id=kebakaran" class="footer-link">Pencegahan Kebakaran</a>
-          <a href="materi.html?id=p3k" class="footer-link">Pertolongan Pertama</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-heading">Fitur</div>
-        <div class="footer-links">
-          <a href="kursus.html" class="footer-link">Daftar Kursus</a>
-          <a href="kuis.html" class="footer-link">Kuis Interaktif</a>
-          <a href="hasil.html" class="footer-link">Hasil dan Nilai</a>
+          <a href="materi.html?id=ergonomi" class="footer-link">Ergonomi Programmer</a>
+          <a href="materi.html?id=mata" class="footer-link">Kesehatan Mata 20-20-20</a>
+          <a href="materi.html?id=listrik" class="footer-link">Kelistrikan Lab Komputer</a>
+          <a href="materi.html?id=apar" class="footer-link">Proteksi APAR CO2</a>
         </div>
       </div>
       <div>
-        <div class="footer-heading">Standar</div>
+        <div class="footer-heading">Fitur Kuis</div>
         <div class="footer-links">
-          <a href="#" class="footer-link">UU No. 1/1970</a>
-          <a href="#" class="footer-link">ISO 45001:2018</a>
-          <a href="#" class="footer-link">PP No. 50/2012</a>
+          <a href="kursus.html" class="footer-link">Daftar Kursus K3</a>
+          <a href="kuis.html" class="footer-link">Kuis Interaktif K3 PPLG</a>
+          <a href="hasil.html" class="footer-link">Hasil dan Evaluasi Skor</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Standar K3 & IT</div>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Permenaker No. 5/2018 (Ergonomi)</a>
+          <a href="#" class="footer-link">SNI 03-6575 (Pencahayaan)</a>
+          <a href="#" class="footer-link">NFPA 75 (Perlindungan Ruang IT)</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 K3Learn. Platform Pembelajaran K3 Online.</span>
-      <span style="color:rgba(255,255,255,0.4)">Keselamatan adalah prioritas utama 🛡️</span>
+      <span>© 2026 K3Learn PPLG. Pembelajaran K3 Kejuruan Informatika & Komputer.</span>
+      <span style="color:rgba(255,255,255,0.4)">Coding Sehat, Karya Hebat 🚀</span>
     </div>
   </div>
 </footer>
